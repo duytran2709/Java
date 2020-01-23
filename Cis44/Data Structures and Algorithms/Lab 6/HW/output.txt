@@ -1,0 +1,9 @@
+a = [15, 1, 8, 10, 2, 5]
+Is sorted: false
+
+After sorted:
+a = [1, 2, 5, 8, 10, 15]
+Is 8 in the array: true
+
+List is: [8, 7, 2, 9, 15]
+Range: [0,6]

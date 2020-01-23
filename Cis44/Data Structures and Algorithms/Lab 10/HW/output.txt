@@ -1,0 +1,13 @@
+Added: 15
+Added: 10
+Added: 20
+Added: 8
+Added: 12
+Added: 17
+Added: 25
+Added: 16
+Added: 18
+
+Is balanced: true
+Is BST: true
+The predecessor of 20 is: 18

@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Books",
+            "request": "launch",
+            "mainClass": "framedemo1.Books"
+        }
+    ]
+}

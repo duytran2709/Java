@@ -1,0 +1,592 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2509
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red88\green138\blue67;\red202\green202\blue202;
+\red71\green137\blue205;\red67\green192\blue160;\red141\green212\blue254;\red167\green197\blue151;\red212\green213\blue154;
+\red183\green111\blue179;\red194\green126\blue101;\red0\green0\blue0;\red255\green255\blue255;\red88\green137\blue67;
+}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c41525\c59950\c33208;\cssrgb\c83229\c83229\c83125;
+\cssrgb\c33936\c61427\c84130;\cssrgb\c30610\c78876\c69022;\cssrgb\c61361\c86489\c99746;\cssrgb\c71008\c80807\c65805;\cssrgb\c86261\c86245\c66529;
+\cssrgb\c77331\c52624\c75301;\cssrgb\c80778\c56830\c46925;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c41481\c59899\c33082;
+}
+\margl1440\margr1440\vieww19540\viewh17280\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \cb2 Duy Tran - G01826554\
+Cis43 \
+Chapter10 Assignments\
+
+\fs24 \
+\pard\pardeftab720\sl540\partightenfactor0
+
+\f1\fs36 \cf3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 //\'a0Fig.\'a08.7:\'a0Date.java\'a0\cf4 \strokec4 \
+\cf3 \strokec3 //\'a0Date\'a0class\'a0declaration.\cf4 \strokec4 \
+\
+\pard\pardeftab720\sl540\partightenfactor0
+\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf5 \strokec5 class\cf4 \strokec4 \'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\
+\{\
+\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf6 \strokec6 int\cf4 \strokec4 \'a0\cf7 \strokec7 month\cf4 \strokec4 ;\'a0\cf3 \strokec3 //\'a01-12\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf6 \strokec6 int\cf4 \strokec4 \'a0\cf7 \strokec7 day\cf4 \strokec4 ;\'a0\cf3 \strokec3 //\'a01-31\'a0based\'a0on\'a0month\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf6 \strokec6 int\cf4 \strokec4 \'a0\cf7 \strokec7 year\cf4 \strokec4 ;\'a0\cf3 \strokec3 //\'a0any\'a0year\cf4 \strokec4 \
+\
+\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf5 \strokec5 static\cf4 \strokec4 \'a0\cf5 \strokec5 final\cf4 \strokec4 \'a0\cf6 \strokec6 int\cf4 \strokec4 []\'a0\cf7 \strokec7 daysPerMonth\cf4 \strokec4 \'a0=\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\{\cf8 \strokec8 0\cf4 \strokec4 ,\'a0\cf8 \strokec8 31\cf4 \strokec4 ,\'a0\cf8 \strokec8 28\cf4 \strokec4 ,\'a0\cf8 \strokec8 31\cf4 \strokec4 ,\'a0\cf8 \strokec8 30\cf4 \strokec4 ,\'a0\cf8 \strokec8 31\cf4 \strokec4 ,\'a0\cf8 \strokec8 30\cf4 \strokec4 ,\'a0\cf8 \strokec8 31\cf4 \strokec4 ,\'a0\cf8 \strokec8 31\cf4 \strokec4 ,\'a0\cf8 \strokec8 30\cf4 \strokec4 ,\'a0\cf8 \strokec8 31\cf4 \strokec4 ,\'a0\cf8 \strokec8 30\cf4 \strokec4 ,\'a0\cf8 \strokec8 31\cf4 \strokec4 \};\
+\'a0\'a0\'a0\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0constructor:\'a0confirm\'a0proper\'a0value\'a0for\'a0month\'a0and\'a0day\'a0given\'a0the\'a0year\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf9 \strokec9 Date\cf4 \strokec4 (\cf6 \strokec6 int\cf4 \strokec4 \'a0\cf7 \strokec7 month\cf4 \strokec4 ,\'a0\cf6 \strokec6 int\cf4 \strokec4 \'a0\cf7 \strokec7 day\cf4 \strokec4 ,\'a0\cf6 \strokec6 int\cf4 \strokec4 \'a0\cf7 \strokec7 year\cf4 \strokec4 )\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \strokec3 //\'a0check\'a0if\'a0month\'a0in\'a0range\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(month\'a0<=\'a0\cf8 \strokec8 0\cf4 \strokec4 \'a0||\'a0month\'a0>\'a0\cf8 \strokec8 12\cf4 \strokec4 )\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "month\'a0("\cf4 \strokec4 \'a0+\'a0month\'a0+\'a0\cf11 \strokec11 ")\'a0must\'a0be\'a01-12"\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \strokec3 //\'a0check\'a0if\'a0day\'a0in\'a0range\'a0for\'a0month\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(day\'a0<=\'a0\cf8 \strokec8 0\cf4 \strokec4 \'a0||\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0(day\'a0>\'a0daysPerMonth[month]\'a0&&\'a0!(month\'a0==\'a0\cf8 \strokec8 2\cf4 \strokec4 \'a0&&\'a0day\'a0==\'a0\cf8 \strokec8 29\cf4 \strokec4 )))\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\cf11 \strokec11 "day\'a0("\cf4 \strokec4 \'a0+\'a0day\'a0+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 ")\'a0out-of-range\'a0for\'a0the\'a0specified\'a0month\'a0and\'a0year"\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \strokec3 //\'a0check\'a0for\'a0leap\'a0year\'a0if\'a0month\'a0is\'a02\'a0and\'a0day\'a0is\'a029\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(month\'a0==\'a0\cf8 \strokec8 2\cf4 \strokec4 \'a0&&\'a0day\'a0==\'a0\cf8 \strokec8 29\cf4 \strokec4 \'a0&&\'a0!(year\'a0%\'a0\cf8 \strokec8 400\cf4 \strokec4 \'a0==\'a0\cf8 \strokec8 0\cf4 \strokec4 \'a0||\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0(year\'a0%\'a0\cf8 \strokec8 4\cf4 \strokec4 \'a0==\'a0\cf8 \strokec8 0\cf4 \strokec4 \'a0&&\'a0year\'a0%\'a0\cf8 \strokec8 100\cf4 \strokec4 \'a0!=\'a0\cf8 \strokec8 0\cf4 \strokec4 )))\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\cf11 \strokec11 "day\'a0("\cf4 \strokec4 \'a0+\'a0day\'a0+\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 ")\'a0out-of-range\'a0for\'a0the\'a0specified\'a0month\'a0and\'a0year"\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 month\cf4 \strokec4 \'a0=\'a0month;\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 day\cf4 \strokec4 \'a0=\'a0day;\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 year\cf4 \strokec4 \'a0=\'a0year;\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 System\cf4 \strokec4 .\cf7 \strokec7 out\cf4 \strokec4 .\cf9 \strokec9 printf\cf4 \strokec4 (\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "Date\'a0object\'a0constructor\'a0for\'a0date\'a0%s%n"\cf4 \strokec4 ,\'a0\cf5 \strokec5 this\cf4 \strokec4 );\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 int\cf4 \strokec4 \'a0\cf9 \strokec9 getMonth\cf4 \strokec4 ()\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0month;\
+\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0a\'a0String\'a0of\'a0the\'a0form\'a0month/day/year\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf9 \strokec9 toString\cf4 \strokec4 ()\
+\'a0\'a0\'a0\{\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0\cf7 \strokec7 String\cf4 \strokec4 .\cf9 \strokec9 format\cf4 \strokec4 (\cf11 \strokec11 "%d/%d/%d"\cf4 \strokec4 ,\'a0month,\'a0day,\'a0year);\'a0\
+\'a0\'a0\'a0\}\'a0\
+\}\'a0\cf3 \strokec3 //\'a0end\'a0class\'a0Date\
+\
+\pard\pardeftab720\sl540\partightenfactor0
+\cf3 \strokec3 //\'a0Fig.\'a010.4:\'a0Employee.java\cf4 \strokec4 \
+\cf3 \strokec3 //\'a0Employee\'a0abstract\'a0superclass.\cf4 \strokec4 \
+\
+\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf5 \strokec5 abstract\cf4 \strokec4 \'a0\cf5 \strokec5 class\cf4 \strokec4 \'a0\cf6 \strokec6 Employee\cf4 \strokec4 \'a0\
+\{\
+\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf5 \strokec5 final\cf4 \strokec4 \'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 firstName\cf4 \strokec4 ;\
+\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf5 \strokec5 final\cf4 \strokec4 \'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 lastName\cf4 \strokec4 ;\
+\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf5 \strokec5 final\cf4 \strokec4 \'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 socialSecurityNumber\cf4 \strokec4 ;\
+\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf7 \strokec7 birthdate\cf4 \strokec4 ;\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0constructor\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf9 \strokec9 Employee\cf4 \strokec4 (\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 firstName\cf4 \strokec4 ,\'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 lastName\cf4 \strokec4 ,\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 socialSecurityNumber\cf4 \strokec4 ,\'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf7 \strokec7 birthdate\cf4 \strokec4 )\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 firstName\cf4 \strokec4 \'a0=\'a0firstName;\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 lastName\cf4 \strokec4 \'a0=\'a0lastName;\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 socialSecurityNumber\cf4 \strokec4 \'a0=\'a0socialSecurityNumber;\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 birthdate\cf4 \strokec4 \'a0=\'a0birthdate;\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0first\'a0name\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf9 \strokec9 getFirstName\cf4 \strokec4 ()\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0firstName;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0last\'a0name\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf9 \strokec9 getLastName\cf4 \strokec4 ()\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0lastName;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0social\'a0security\'a0number\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf9 \strokec9 getSocialSecurityNumber\cf4 \strokec4 ()\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0socialSecurityNumber;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf9 \strokec9 getBirthDate\cf4 \strokec4 ()\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0birthdate;\
+\'a0\'a0\'a0\}\
+\
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 void\cf4 \strokec4 \'a0\cf9 \strokec9 setBirthDate\cf4 \strokec4 (\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf7 \strokec7 birthdate\cf4 \strokec4 )\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 birthdate\cf4 \strokec4 \'a0=\'a0birthdate;\
+\'a0\'a0\'a0\}\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0String\'a0representation\'a0of\'a0Employee\'a0object\cf4 \strokec4 \
+\'a0\'a0\'a0@\cf6 \strokec6 Override\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf9 \strokec9 toString\cf4 \strokec4 ()\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0\cf7 \strokec7 String\cf4 \strokec4 .\cf9 \strokec9 format\cf4 \strokec4 (\cf11 \strokec11 "%s\'a0%s%nsocial\'a0security\'a0number:\'a0%s%nBirthdate:\'a0%s%n"\cf4 \strokec4 ,\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 \strokec9 getFirstName\cf4 \strokec4 (),\'a0\cf9 \strokec9 getLastName\cf4 \strokec4 (),\'a0\cf9 \strokec9 getSocialSecurityNumber\cf4 \strokec4 (),\'a0\cf9 \strokec9 getBirthDate\cf4 \strokec4 ());\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0abstract\'a0method\'a0must\'a0be\'a0overridden\'a0by\'a0concrete\'a0subclasses\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf5 \strokec5 abstract\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf9 \strokec9 earnings\cf4 \strokec4 ();\'a0\cf3 \strokec3 //\'a0no\'a0implementation\'a0here\cf4 \strokec4 \
+\}\'a0\cf3 \strokec3 //\'a0end\'a0abstract\'a0class\'a0Employee\cf4 \strokec4 \
+\pard\pardeftab720\sl540\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\sl540\partightenfactor0
+\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf5 \strokec5 class\cf4 \strokec4 \'a0\cf6 \strokec6 BasePlusCommissionEmployee\cf4 \strokec4 \'a0\cf5 \strokec5 extends\cf4 \strokec4 \'a0\cf6 \strokec6 CommissionEmployee\cf4 \strokec4 \'a0\
+\{\
+\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 baseSalary\cf4 \strokec4 ;\'a0\cf3 \strokec3 //\'a0base\'a0salary\'a0per\'a0week\cf4 \strokec4 \
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0constructor\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf9 \strokec9 BasePlusCommissionEmployee\cf4 \strokec4 (\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 firstName\cf4 \strokec4 ,\'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 lastName\cf4 \strokec4 ,\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 socialSecurityNumber\cf4 \strokec4 ,\'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf7 \strokec7 birthDate\cf4 \strokec4 ,\'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 grossSales\cf4 \strokec4 ,\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 commissionRate\cf4 \strokec4 ,\'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 baseSalary\cf4 \strokec4 )\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 super\cf4 \strokec4 (firstName,\'a0lastName,\'a0socialSecurityNumber,\'a0birthDate,\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0grossSales,\'a0commissionRate);\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(baseSalary\'a0<\'a0\cf8 \strokec8 0.0\cf4 \strokec4 )\'a0\cf3 \strokec3 //\'a0validate\'a0baseSalary\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\cf11 \strokec11 "Base\'a0salary\'a0must\'a0be\'a0>=\'a00.0"\cf4 \strokec4 );\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 baseSalary\cf4 \strokec4 \'a0=\'a0baseSalary;\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\}\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0set\'a0base\'a0salary\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 void\cf4 \strokec4 \'a0\cf9 \strokec9 setBaseSalary\cf4 \strokec4 (\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 baseSalary\cf4 \strokec4 )\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(baseSalary\'a0<\'a0\cf8 \strokec8 0.0\cf4 \strokec4 )\'a0\cf3 \strokec3 //\'a0validate\'a0baseSalary\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\cf11 \strokec11 "Base\'a0salary\'a0must\'a0be\'a0>=\'a00.0"\cf4 \strokec4 );\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 baseSalary\cf4 \strokec4 \'a0=\'a0baseSalary;\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0base\'a0salary\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf9 \strokec9 getBaseSalary\cf4 \strokec4 ()\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0baseSalary;\
+\'a0\'a0\'a0\}\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0calculate\'a0earnings;\'a0override\'a0method\'a0earnings\'a0in\'a0CommissionEmployee\cf4 \strokec4 \
+\'a0\'a0\'a0@\cf6 \strokec6 Override\cf4 \strokec4 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf9 \strokec9 earnings\cf4 \strokec4 ()\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0\cf9 \strokec9 getBaseSalary\cf4 \strokec4 ()\'a0+\'a0\cf5 \strokec5 super\cf4 \strokec4 .\cf9 \strokec9 earnings\cf4 \strokec4 ();\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\}\'a0\
+\'a0\'a0\'a0\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0String\'a0representation\'a0of\'a0BasePlusCommissionEmployee\'a0object\cf4 \strokec4 \
+\'a0\'a0\'a0@\cf6 \strokec6 Override\cf4 \strokec4 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf9 \strokec9 toString\cf4 \strokec4 ()\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0\cf7 \strokec7 String\cf4 \strokec4 .\cf9 \strokec9 format\cf4 \strokec4 (\cf11 \strokec11 "%s\'a0%s;\'a0%s:\'a0$%,.2f"\cf4 \strokec4 ,\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "base-salaried"\cf4 \strokec4 ,\'a0\cf5 \strokec5 super\cf4 \strokec4 .\cf9 \strokec9 toString\cf4 \strokec4 (),\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "base\'a0salary"\cf4 \strokec4 ,\'a0\cf9 \strokec9 getBaseSalary\cf4 \strokec4 ());\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\}\'a0\
+\}\'a0\cf3 \strokec3 //\'a0end\'a0class\'a0BasePlusCommissionEmployee\cf4 \strokec4 \
+\pard\pardeftab720\sl540\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\sl540\partightenfactor0
+\cf3 \strokec3 //\'a0Fig.\'a010.7:\'a0CommissionEmployee.java\cf4 \strokec4 \
+\cf3 \strokec3 //\'a0CommissionEmployee\'a0class\'a0extends\'a0Employee.\cf4 \strokec4 \
+\
+\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf5 \strokec5 class\cf4 \strokec4 \'a0\cf6 \strokec6 CommissionEmployee\cf4 \strokec4 \'a0\cf5 \strokec5 extends\cf4 \strokec4 \'a0\cf6 \strokec6 Employee\cf4 \strokec4 \'a0\
+\{\
+\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 grossSales\cf4 \strokec4 ;\'a0\cf3 \strokec3 //\'a0gross\'a0weekly\'a0sales\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 commissionRate\cf4 \strokec4 ;\'a0\cf3 \strokec3 //\'a0commission\'a0percentage\cf4 \strokec4 \
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0constructor\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf9 \strokec9 CommissionEmployee\cf4 \strokec4 (\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 firstName\cf4 \strokec4 ,\'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 lastName\cf4 \strokec4 ,\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 socialSecurityNumber\cf4 \strokec4 ,\'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf7 \strokec7 birthDate\cf4 \strokec4 ,\'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 grossSales\cf4 \strokec4 ,\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 commissionRate\cf4 \strokec4 )\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 super\cf4 \strokec4 (firstName,\'a0lastName,\'a0socialSecurityNumber,\'a0birthDate);\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(commissionRate\'a0<=\'a0\cf8 \strokec8 0.0\cf4 \strokec4 \'a0||\'a0commissionRate\'a0>=\'a0\cf8 \strokec8 1.0\cf4 \strokec4 )\'a0\cf3 \strokec3 //\'a0validate\'a0\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "Commission\'a0rate\'a0must\'a0be\'a0>\'a00.0\'a0and\'a0<\'a01.0"\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(grossSales\'a0<\'a0\cf8 \strokec8 0.0\cf4 \strokec4 )\'a0\cf3 \strokec3 //\'a0validate\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\cf11 \strokec11 "Gross\'a0sales\'a0must\'a0be\'a0>=\'a00.0"\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 grossSales\cf4 \strokec4 \'a0=\'a0grossSales;\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 commissionRate\cf4 \strokec4 \'a0=\'a0commissionRate;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0set\'a0gross\'a0sales\'a0amount\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 void\cf4 \strokec4 \'a0\cf9 \strokec9 setGrossSales\cf4 \strokec4 (\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 grossSales\cf4 \strokec4 )\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(grossSales\'a0<\'a0\cf8 \strokec8 0.0\cf4 \strokec4 )\'a0\cf3 \strokec3 //\'a0validate\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\cf11 \strokec11 "Gross\'a0sales\'a0must\'a0be\'a0>=\'a00.0"\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 grossSales\cf4 \strokec4 \'a0=\'a0grossSales;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0gross\'a0sales\'a0amount\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf9 \strokec9 getGrossSales\cf4 \strokec4 ()\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0grossSales;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0set\'a0commission\'a0rate\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 void\cf4 \strokec4 \'a0\cf9 \strokec9 setCommissionRate\cf4 \strokec4 (\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 commissionRate\cf4 \strokec4 )\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(commissionRate\'a0<=\'a0\cf8 \strokec8 0.0\cf4 \strokec4 \'a0||\'a0commissionRate\'a0>=\'a0\cf8 \strokec8 1.0\cf4 \strokec4 )\'a0\cf3 \strokec3 //\'a0validate\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "Commission\'a0rate\'a0must\'a0be\'a0>\'a00.0\'a0and\'a0<\'a01.0"\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 commissionRate\cf4 \strokec4 \'a0=\'a0commissionRate;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0commission\'a0rate\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf9 \strokec9 getCommissionRate\cf4 \strokec4 ()\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0commissionRate;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0calculate\'a0earnings;\'a0override\'a0abstract\'a0method\'a0earnings\'a0in\'a0Employee\cf4 \strokec4 \
+\'a0\'a0\'a0@\cf6 \strokec6 Override\cf4 \strokec4 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf9 \strokec9 earnings\cf4 \strokec4 ()\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0\cf9 \strokec9 getCommissionRate\cf4 \strokec4 ()\'a0*\'a0\cf9 \strokec9 getGrossSales\cf4 \strokec4 ();\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\}\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0String\'a0representation\'a0of\'a0CommissionEmployee\'a0object\cf4 \strokec4 \
+\'a0\'a0\'a0@\cf6 \strokec6 Override\cf4 \strokec4 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf9 \strokec9 toString\cf4 \strokec4 ()\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0\cf7 \strokec7 String\cf4 \strokec4 .\cf9 \strokec9 format\cf4 \strokec4 (\cf11 \strokec11 "%s:\'a0%s%n%s:\'a0$%,.2f;\'a0%s:\'a0%.2f"\cf4 \strokec4 ,\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "commission\'a0employee"\cf4 \strokec4 ,\'a0\cf5 \strokec5 super\cf4 \strokec4 .\cf9 \strokec9 toString\cf4 \strokec4 (),\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "gross\'a0sales"\cf4 \strokec4 ,\'a0\cf9 \strokec9 getGrossSales\cf4 \strokec4 (),\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "commission\'a0rate"\cf4 \strokec4 ,\'a0\cf9 \strokec9 getCommissionRate\cf4 \strokec4 ());\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\}\'a0\
+\}\'a0\cf3 \strokec3 //\'a0end\'a0class\'a0CommissionEmployee\cf4 \strokec4 \
+\pard\pardeftab720\sl540\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\sl540\partightenfactor0
+\cf3 \strokec3 //\'a0Fig.\'a010.6:\'a0HourlyEmployee.java\cf4 \strokec4 \
+\cf3 \strokec3 //\'a0HourlyEmployee\'a0class\'a0extends\'a0Employee.\cf4 \strokec4 \
+\
+\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf5 \strokec5 class\cf4 \strokec4 \'a0\cf6 \strokec6 HourlyEmployee\cf4 \strokec4 \'a0\cf5 \strokec5 extends\cf4 \strokec4 \'a0\cf6 \strokec6 Employee\cf4 \strokec4 \'a0\
+\{\
+\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 wage\cf4 \strokec4 ;\'a0\cf3 \strokec3 //\'a0wage\'a0per\'a0hour\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 hours\cf4 \strokec4 ;\'a0\cf3 \strokec3 //\'a0hours\'a0worked\'a0for\'a0week\cf4 \strokec4 \
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0constructor\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf9 \strokec9 HourlyEmployee\cf4 \strokec4 (\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 firstName\cf4 \strokec4 ,\'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 lastName\cf4 \strokec4 ,\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 socialSecurityNumber\cf4 \strokec4 ,\'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf7 \strokec7 birthDate\cf4 \strokec4 ,\'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 wage\cf4 \strokec4 ,\'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 hours\cf4 \strokec4 )\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 super\cf4 \strokec4 (firstName,\'a0lastName,\'a0socialSecurityNumber,\'a0birthDate);\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(wage\'a0<\'a0\cf8 \strokec8 0.0\cf4 \strokec4 )\'a0\cf3 \strokec3 //\'a0validate\'a0wage\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "Hourly\'a0wage\'a0must\'a0be\'a0>=\'a00.0"\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0((hours\'a0<\'a0\cf8 \strokec8 0.0\cf4 \strokec4 )\'a0||\'a0(hours\'a0>\'a0\cf8 \strokec8 168.0\cf4 \strokec4 ))\'a0\cf3 \strokec3 //\'a0validate\'a0hours\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "Hours\'a0worked\'a0must\'a0be\'a0>=\'a00.0\'a0and\'a0<=\'a0168.0"\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 wage\cf4 \strokec4 \'a0=\'a0wage;\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 hours\cf4 \strokec4 \'a0=\'a0hours;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0set\'a0wage\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 void\cf4 \strokec4 \'a0\cf9 \strokec9 setWage\cf4 \strokec4 (\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 wage\cf4 \strokec4 )\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(wage\'a0<\'a0\cf8 \strokec8 0.0\cf4 \strokec4 )\'a0\cf3 \strokec3 //\'a0validate\'a0wage\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "Hourly\'a0wage\'a0must\'a0be\'a0>=\'a00.0"\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 wage\cf4 \strokec4 \'a0=\'a0wage;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0wage\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf9 \strokec9 getWage\cf4 \strokec4 ()\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0wage;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0set\'a0hours\'a0worked\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 void\cf4 \strokec4 \'a0\cf9 \strokec9 setHours\cf4 \strokec4 (\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 hours\cf4 \strokec4 )\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0((hours\'a0<\'a0\cf8 \strokec8 0.0\cf4 \strokec4 )\'a0||\'a0(hours\'a0>\'a0\cf8 \strokec8 168.0\cf4 \strokec4 ))\'a0\cf3 \strokec3 //\'a0validate\'a0hours\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "Hours\'a0worked\'a0must\'a0be\'a0>=\'a00.0\'a0and\'a0<=\'a0168.0"\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 hours\cf4 \strokec4 \'a0=\'a0hours;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0hours\'a0worked\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf9 \strokec9 getHours\cf4 \strokec4 ()\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0hours;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0calculate\'a0earnings;\'a0override\'a0abstract\'a0method\'a0earnings\'a0in\'a0Employee\cf4 \strokec4 \
+\'a0\'a0\'a0@\cf6 \strokec6 Override\cf4 \strokec4 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf9 \strokec9 earnings\cf4 \strokec4 ()\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(\cf9 \strokec9 getHours\cf4 \strokec4 ()\'a0<=\'a0\cf8 \strokec8 40\cf4 \strokec4 )\'a0\cf3 \strokec3 //\'a0no\'a0overtime\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0\cf9 \strokec9 getWage\cf4 \strokec4 ()\'a0*\'a0\cf9 \strokec9 getHours\cf4 \strokec4 ();\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 else\cf4 \strokec4 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0\cf8 \strokec8 40\cf4 \strokec4 \'a0*\'a0\cf9 \strokec9 getWage\cf4 \strokec4 ()\'a0+\'a0(\cf9 \strokec9 getHours\cf4 \strokec4 ()\'a0-\'a0\cf8 \strokec8 40\cf4 \strokec4 )\'a0*\'a0\cf9 \strokec9 getWage\cf4 \strokec4 ()\'a0*\'a0\cf8 \strokec8 1.5\cf4 \strokec4 ;\
+\'a0\'a0\'a0\}\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0String\'a0representation\'a0of\'a0HourlyEmployee\'a0object\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 \
+\'a0\'a0\'a0@\cf6 \strokec6 Override\cf4 \strokec4 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf9 \strokec9 toString\cf4 \strokec4 ()\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0\cf7 \strokec7 String\cf4 \strokec4 .\cf9 \strokec9 format\cf4 \strokec4 (\cf11 \strokec11 "hourly\'a0employee:\'a0%s%n%s:\'a0$%,.2f;\'a0%s:\'a0%,.2f"\cf4 \strokec4 ,\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 super\cf4 \strokec4 .\cf9 \strokec9 toString\cf4 \strokec4 (),\'a0\cf11 \strokec11 "hourly\'a0wage"\cf4 \strokec4 ,\'a0\cf9 \strokec9 getWage\cf4 \strokec4 (),\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "hours\'a0worked"\cf4 \strokec4 ,\'a0\cf9 \strokec9 getHours\cf4 \strokec4 ());\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\}\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\}\'a0\cf3 \strokec3 //\'a0end\'a0class\'a0HourlyEmployee\
+\
+//\'a0PieceWorker\'a0Class\cf4 \strokec4 \
+\cf3 \strokec3 //\'a010.14\'a0(Payroll\'a0System\'a0Modification)\cf4 \strokec4 \
+\
+\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf5 \strokec5 class\cf4 \strokec4 \'a0\cf6 \strokec6 PieceWorker\cf4 \strokec4 \'a0\cf5 \strokec5 extends\cf4 \strokec4 \'a0\cf6 \strokec6 Employee\cf4 \strokec4 \'a0\{\
+\'a0\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 wage\cf4 \strokec4 ;\
+\'a0\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf6 \strokec6 int\cf4 \strokec4 \'a0\cf7 \strokec7 pieces\cf4 \strokec4 ;\
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf9 \strokec9 PieceWorker\cf4 \strokec4 \'a0(\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 firstName\cf4 \strokec4 ,\'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 lastName\cf4 \strokec4 ,\
+\'a0\'a0\'a0\'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 socialSecurityNumber\cf4 \strokec4 ,\'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf7 \strokec7 birthDate\cf4 \strokec4 ,\'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 wage\cf4 \strokec4 ,\'a0\cf6 \strokec6 int\cf4 \strokec4 \'a0\cf7 \strokec7 pieces\cf4 \strokec4 )\
+\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 super\cf4 \strokec4 (firstName,\'a0lastName,\'a0socialSecurityNumber,\'a0birthDate\'a0);\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 wage\cf4 \strokec4 \'a0=\'a0wage;\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 pieces\cf4 \strokec4 \'a0=\'a0pieces;\
+\'a0\'a0\'a0\'a0\}\
+\
+\'a0\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 void\cf4 \strokec4 \'a0\cf9 \strokec9 setWage\cf4 \strokec4 (\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 wage\cf4 \strokec4 )\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 wage\cf4 \strokec4 \'a0=\'a0wage;\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\}\
+\
+\'a0\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf9 \strokec9 getWage\cf4 \strokec4 ()\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0wage;\
+\'a0\'a0\'a0\'a0\}\
+\
+\'a0\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 void\cf4 \strokec4 \'a0\cf9 \strokec9 setPieces\cf4 \strokec4 (\cf6 \strokec6 int\cf4 \strokec4 \'a0\cf7 \strokec7 pieces\cf4 \strokec4 )\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 pieces\cf4 \strokec4 \'a0=\'a0pieces;\
+\'a0\'a0\'a0\'a0\}\
+\
+\'a0\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 int\cf4 \strokec4 \'a0\cf9 \strokec9 getPieces\cf4 \strokec4 ()\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0pieces;\
+\'a0\'a0\'a0\'a0\}\
+\
+\'a0\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf9 \strokec9 earnings\cf4 \strokec4 ()\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0wage\'a0*\'a0pieces;\'a0\
+\'a0\'a0\'a0\'a0\}\
+\
+\'a0\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf9 \strokec9 toString\cf4 \strokec4 ()\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0\cf7 \strokec7 String\cf4 \strokec4 .\cf9 \strokec9 format\cf4 \strokec4 (\cf11 \strokec11 "PieceWorker:\'a0%s%n%s\'a0:\'a0%.2f%n%s\'a0:\'a0%d%n"\cf4 \strokec4 ,\'a0\cf5 \strokec5 super\cf4 \strokec4 .\cf9 \strokec9 toString\cf4 \strokec4 (),\'a0\cf11 \strokec11 "wage"\cf4 \strokec4 ,\'a0wage,\'a0\cf11 \strokec11 "pieces"\cf4 \strokec4 ,\'a0pieces\'a0);\
+\'a0\'a0\'a0\'a0\}\
+\}\'a0\cf3 \strokec3 //\'a0End\'a0of\'a0PieceWorker\'a0Class\cf4 \strokec4 \
+\
+\cf3 \strokec3 //\'a0Fig.\'a010.5:\'a0SalariedEmployee.java\cf4 \strokec4 \
+\cf3 \strokec3 //\'a0SalariedEmployee\'a0concrete\'a0class\'a0extends\'a0abstract\'a0class\'a0Employee.\cf4 \strokec4 \
+\
+\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf5 \strokec5 class\cf4 \strokec4 \'a0\cf6 \strokec6 SalariedEmployee\cf4 \strokec4 \'a0\cf5 \strokec5 extends\cf4 \strokec4 \'a0\cf6 \strokec6 Employee\cf4 \strokec4 \'a0\
+\{\
+\'a0\'a0\'a0\cf5 \strokec5 private\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 weeklySalary\cf4 \strokec4 ;\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0constructor\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf9 \strokec9 SalariedEmployee\cf4 \strokec4 (\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 firstName\cf4 \strokec4 ,\'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 lastName\cf4 \strokec4 ,\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf7 \strokec7 socialSecurityNumber\cf4 \strokec4 ,\'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf7 \strokec7 birthday\cf4 \strokec4 ,\'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 weeklySalary\cf4 \strokec4 )\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 super\cf4 \strokec4 (firstName,\'a0lastName,\'a0socialSecurityNumber,\'a0birthday);\'a0\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(weeklySalary\'a0<\'a0\cf8 \strokec8 0.0\cf4 \strokec4 )\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "Weekly\'a0salary\'a0must\'a0be\'a0>=\'a00.0"\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 weeklySalary\cf4 \strokec4 \'a0=\'a0weeklySalary;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0set\'a0salary\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 void\cf4 \strokec4 \'a0\cf9 \strokec9 setWeeklySalary\cf4 \strokec4 (\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf7 \strokec7 weeklySalary\cf4 \strokec4 )\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(weeklySalary\'a0<\'a0\cf8 \strokec8 0.0\cf4 \strokec4 )\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 throw\cf4 \strokec4 \'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 IllegalArgumentException\cf4 \strokec4 (\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "Weekly\'a0salary\'a0must\'a0be\'a0>=\'a00.0"\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .\cf7 \strokec7 weeklySalary\cf4 \strokec4 \'a0=\'a0weeklySalary;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0salary\cf4 \strokec4 \
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf9 \strokec9 getWeeklySalary\cf4 \strokec4 ()\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0weeklySalary;\
+\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0calculate\'a0earnings;\'a0override\'a0abstract\'a0method\'a0earnings\'a0in\'a0Employee\cf4 \strokec4 \
+\'a0\'a0\'a0@\cf6 \strokec6 Override\cf4 \strokec4 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 double\cf4 \strokec4 \'a0\cf9 \strokec9 earnings\cf4 \strokec4 ()\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0\cf9 \strokec9 getWeeklySalary\cf4 \strokec4 ();\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\}\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\
+\'a0\'a0\'a0\cf3 \strokec3 //\'a0return\'a0String\'a0representation\'a0of\'a0SalariedEmployee\'a0object\'a0\'a0\'a0\cf4 \strokec4 \
+\'a0\'a0\'a0@\cf6 \strokec6 Override\cf4 \strokec4 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf6 \strokec6 String\cf4 \strokec4 \'a0\cf9 \strokec9 toString\cf4 \strokec4 ()\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 return\cf4 \strokec4 \'a0\cf7 \strokec7 String\cf4 \strokec4 .\cf9 \strokec9 format\cf4 \strokec4 (\cf11 \strokec11 "salaried\'a0employee:\'a0%s%n%s:\'a0$%,.2f"\cf4 \strokec4 ,\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 super\cf4 \strokec4 .\cf9 \strokec9 toString\cf4 \strokec4 (),\'a0\cf11 \strokec11 "weekly\'a0salary"\cf4 \strokec4 ,\'a0\cf9 \strokec9 getWeeklySalary\cf4 \strokec4 ());\
+\'a0\'a0\'a0\}\'a0\
+\}\'a0\cf3 \strokec3 //\'a0end\'a0class\'a0SalariedEmployee\cf4 \strokec4 \
+\
+\pard\pardeftab720\sl540\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\sl540\partightenfactor0
+\cf3 \strokec3 //\'a0Fig.\'a010.9:\'a0PayrollSystemTest.java\cf4 \strokec4 \
+\cf3 \strokec3 //\'a0Employee\'a0hierarchy\'a0test\'a0program.\cf4 \strokec4 \
+\
+\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf5 \strokec5 class\cf4 \strokec4 \'a0\cf6 \strokec6 PayrollSystemTest\cf4 \strokec4 \'a0\
+\{\
+\'a0\'a0\'a0\cf5 \strokec5 public\cf4 \strokec4 \'a0\cf5 \strokec5 static\cf4 \strokec4 \'a0\cf6 \strokec6 void\cf4 \strokec4 \'a0\cf9 \strokec9 main\cf4 \strokec4 (\cf6 \strokec6 String\cf4 \strokec4 []\'a0\cf7 \strokec7 args\cf4 \strokec4 )\'a0\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf7 \strokec7 birthDate1\cf4 \strokec4 \'a0=\'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 Date\cf4 \strokec4 (\cf8 \strokec8 10\cf4 \strokec4 ,\'a0\cf8 \strokec8 27\cf4 \strokec4 ,\'a0\cf8 \strokec8 1989\cf4 \strokec4 );\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf7 \strokec7 birthDate2\cf4 \strokec4 \'a0=\'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 Date\cf4 \strokec4 (\cf8 \strokec8 11\cf4 \strokec4 ,\'a0\cf8 \strokec8 28\cf4 \strokec4 ,\'a0\cf8 \strokec8 1990\cf4 \strokec4 );\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf7 \strokec7 birthDate3\cf4 \strokec4 \'a0=\'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 Date\cf4 \strokec4 (\cf8 \strokec8 12\cf4 \strokec4 ,\'a0\cf8 \strokec8 11\cf4 \strokec4 ,\'a0\cf8 \strokec8 1978\cf4 \strokec4 );\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf7 \strokec7 birthDate4\cf4 \strokec4 \'a0=\'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 Date\cf4 \strokec4 (\cf8 \strokec8 02\cf4 \strokec4 ,\'a0\cf8 \strokec8 25\cf4 \strokec4 ,\'a0\cf8 \strokec8 1967\cf4 \strokec4 );\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf7 \strokec7 birthDate5\cf4 \strokec4 \'a0=\'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 Date\cf4 \strokec4 (\cf8 \strokec8 11\cf4 \strokec4 ,\'a0\cf8 \strokec8 06\cf4 \strokec4 ,\'a0\cf8 \strokec8 2019\cf4 \strokec4 );\
+\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 Date\cf4 \strokec4 \'a0\cf7 \strokec7 currentDate\cf4 \strokec4 \'a0=\'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 Date\cf4 \strokec4 (\cf8 \strokec8 11\cf4 \strokec4 ,\'a0\cf8 \strokec8 06\cf4 \strokec4 ,\'a0\cf8 \strokec8 2019\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \strokec3 //\'a0create\'a0subclass\'a0objects\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 SalariedEmployee\cf4 \strokec4 \'a0\cf7 \strokec7 salariedEmployee\cf4 \strokec4 \'a0=\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 SalariedEmployee\cf4 \strokec4 (\cf11 \strokec11 "John"\cf4 \strokec4 ,\'a0\cf11 \strokec11 "Smith"\cf4 \strokec4 ,\'a0\cf11 \strokec11 "111-11-1111"\cf4 \strokec4 ,\'a0birthDate1,\'a0\cf8 \strokec8 800.00\cf4 \strokec4 \'a0);\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 HourlyEmployee\cf4 \strokec4 \'a0\cf7 \strokec7 hourlyEmployee\cf4 \strokec4 \'a0=\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 HourlyEmployee\cf4 \strokec4 (\cf11 \strokec11 "Karen"\cf4 \strokec4 ,\'a0\cf11 \strokec11 "Price"\cf4 \strokec4 ,\'a0\cf11 \strokec11 "222-22-2222"\cf4 \strokec4 ,birthDate2,\'a0\cf8 \strokec8 16.75\cf4 \strokec4 ,\'a0\cf8 \strokec8 40\cf4 \strokec4 );\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 CommissionEmployee\cf4 \strokec4 \'a0\cf7 \strokec7 commissionEmployee\cf4 \strokec4 \'a0=\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 CommissionEmployee\cf4 \strokec4 (\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "Sue"\cf4 \strokec4 ,\'a0\cf11 \strokec11 "Jones"\cf4 \strokec4 ,\'a0\cf11 \strokec11 "333-33-3333"\cf4 \strokec4 ,birthDate3,\'a0\cf8 \strokec8 10000\cf4 \strokec4 ,\'a0\cf8 \strokec8 .06\cf4 \strokec4 );\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 BasePlusCommissionEmployee\cf4 \strokec4 \'a0\cf7 \strokec7 basePlusCommissionEmployee\cf4 \strokec4 \'a0=\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 BasePlusCommissionEmployee\cf4 \strokec4 (\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "Bob"\cf4 \strokec4 ,\'a0\cf11 \strokec11 "Lewis"\cf4 \strokec4 ,\'a0\cf11 \strokec11 "444-44-4444"\cf4 \strokec4 ,\'a0birthDate4,\'a0\cf8 \strokec8 5000\cf4 \strokec4 ,\'a0\cf8 \strokec8 .04\cf4 \strokec4 ,\'a0\cf8 \strokec8 300\cf4 \strokec4 );\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 PieceWorker\cf4 \strokec4 \'a0\cf7 \strokec7 pieceWorker\cf4 \strokec4 \'a0=\'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf9 \strokec9 PieceWorker\cf4 \strokec4 (\cf11 \strokec11 "Jesus"\cf4 \strokec4 ,\'a0\cf11 \strokec11 "Nazareth"\cf4 \strokec4 ,\'a0\cf11 \strokec11 "555-55-5555"\cf4 \strokec4 ,\'a0birthDate5,\'a0\cf8 \strokec8 100\cf4 \strokec4 ,\'a0\cf8 \strokec8 90\cf4 \strokec4 );\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \strokec3 //\'a0create\'a0five-element\'a0Employee\'a0array\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 Employee\cf4 \strokec4 []\'a0\cf7 \strokec7 employees\cf4 \strokec4 \'a0=\'a0\cf10 \strokec10 new\cf4 \strokec4 \'a0\cf6 \strokec6 Employee\cf4 \strokec4 [\cf8 \strokec8 5\cf4 \strokec4 ];\'a0\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \strokec3 //\'a0initialize\'a0array\'a0with\'a0Employees\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0employees[\cf8 \strokec8 0\cf4 \strokec4 ]\'a0=\'a0salariedEmployee;\
+\'a0\'a0\'a0\'a0\'a0\'a0employees[\cf8 \strokec8 1\cf4 \strokec4 ]\'a0=\'a0hourlyEmployee;\
+\'a0\'a0\'a0\'a0\'a0\'a0employees[\cf8 \strokec8 2\cf4 \strokec4 ]\'a0=\'a0commissionEmployee;\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0employees[\cf8 \strokec8 3\cf4 \strokec4 ]\'a0=\'a0basePlusCommissionEmployee;\
+\'a0\'a0\'a0\'a0\'a0\'a0employees[\cf8 \strokec8 4\cf4 \strokec4 ]\'a0=\'a0pieceWorker;\'a0\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 System\cf4 \strokec4 .\cf7 \strokec7 out\cf4 \strokec4 .\cf9 \strokec9 printf\cf4 \strokec4 (\cf11 \strokec11 "Employees\'a0processed\'a0polymorphically:%n%n"\cf4 \strokec4 );\
+\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \strokec3 //\'a0generically\'a0process\'a0each\'a0element\'a0in\'a0array\'a0employees\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 for\cf4 \strokec4 \'a0(\cf6 \strokec6 Employee\cf4 \strokec4 \'a0\cf7 \strokec7 currentEmployee\cf4 \strokec4 \'a0\cf10 \strokec10 :\cf4 \strokec4 \'a0employees)\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 System\cf4 \strokec4 .\cf7 \strokec7 out\cf4 \strokec4 .\cf9 \strokec9 println\cf4 \strokec4 (currentEmployee);\'a0\cf3 \strokec3 //\'a0invokes\'a0toString\cf4 \strokec4 \
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \strokec3 //\'a0determine\'a0whether\'a0element\'a0is\'a0a\'a0BasePlusCommissionEmployee\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(currentEmployee\'a0\cf5 \strokec5 instanceof\cf4 \strokec4 \'a0BasePlusCommissionEmployee)\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \strokec3 //\'a0downcast\'a0Employee\'a0reference\'a0to\'a0\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \strokec3 //\'a0BasePlusCommissionEmployee\'a0reference\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 BasePlusCommissionEmployee\cf4 \strokec4 \'a0\cf7 \strokec7 employee\cf4 \strokec4 \'a0=\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0(BasePlusCommissionEmployee)\'a0currentEmployee;\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 employee\cf4 \strokec4 .\cf9 \strokec9 setBaseSalary\cf4 \strokec4 (\cf8 \strokec8 1.10\cf4 \strokec4 \'a0*\'a0\cf7 \strokec7 employee\cf4 \strokec4 .\cf9 \strokec9 getBaseSalary\cf4 \strokec4 ());\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 System\cf4 \strokec4 .\cf7 \strokec7 out\cf4 \strokec4 .\cf9 \strokec9 printf\cf4 \strokec4 (\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 "new\'a0base\'a0salary\'a0with\'a010%%\'a0increase\'a0is:\'a0$%,.2f%n"\cf4 \strokec4 ,\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 employee\cf4 \strokec4 .\cf9 \strokec9 getBaseSalary\cf4 \strokec4 ());\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 if\cf4 \strokec4 \'a0(\cf7 \strokec7 currentEmployee\cf4 \strokec4 .\cf9 \strokec9 getBirthDate\cf4 \strokec4 ().\cf9 \strokec9 getMonth\cf4 \strokec4 ()\'a0==\'a0\cf7 \strokec7 currentDate\cf4 \strokec4 .\cf9 \strokec9 getMonth\cf4 \strokec4 ())\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\{\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 System\cf4 \strokec4 .\cf7 \strokec7 out\cf4 \strokec4 .\cf9 \strokec9 println\cf4 \strokec4 (\cf11 \strokec11 "Happy\'a0Birthday!\'a0You\'a0earned\'a0$100\'a0bonus"\cf4 \strokec4 );\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 System\cf4 \strokec4 .\cf7 \strokec7 out\cf4 \strokec4 .\cf9 \strokec9 printf\cf4 \strokec4 (\cf11 \strokec11 "earned\'a0$%,.2f%n%n"\cf4 \strokec4 ,\'a0\cf7 \strokec7 currentEmployee\cf4 \strokec4 .\cf9 \strokec9 earnings\cf4 \strokec4 ()\'a0+\'a0\cf8 \strokec8 100\cf4 \strokec4 );\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 else\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 System\cf4 \strokec4 .\cf7 \strokec7 out\cf4 \strokec4 .\cf9 \strokec9 printf\cf4 \strokec4 (\cf11 \strokec11 "earned\'a0$%,.2f%n%n"\cf4 \strokec4 ,\'a0\cf7 \strokec7 currentEmployee\cf4 \strokec4 .\cf9 \strokec9 earnings\cf4 \strokec4 ());\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 for\cf4 \strokec4 \'a0(\cf6 \strokec6 int\cf4 \strokec4 \'a0\cf7 \strokec7 i\cf4 \strokec4 \'a0=\'a0\cf8 \strokec8 0\cf4 \strokec4 ;\'a0i\'a0<\'a0\cf8 \strokec8 10\cf4 \strokec4 \'a0;\'a0i++)\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 System\cf4 \strokec4 .\cf7 \strokec7 out\cf4 \strokec4 .\cf9 \strokec9 print\cf4 \strokec4 (\cf11 \strokec11 "---"\cf4 \strokec4 );\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 System\cf4 \strokec4 .\cf7 \strokec7 out\cf4 \strokec4 .\cf9 \strokec9 println\cf4 \strokec4 ();\
+\'a0\'a0\'a0\'a0\'a0\'a0\}\'a0\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 System\cf4 \strokec4 .\cf7 \strokec7 out\cf4 \strokec4 .\cf9 \strokec9 println\cf4 \strokec4 (currentDate);\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \strokec3 //\'a0get\'a0type\'a0name\'a0of\'a0each\'a0object\'a0in\'a0employees\'a0array\cf4 \strokec4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf10 \strokec10 for\cf4 \strokec4 \'a0(\cf6 \strokec6 int\cf4 \strokec4 \'a0\cf7 \strokec7 j\cf4 \strokec4 \'a0=\'a0\cf8 \strokec8 0\cf4 \strokec4 ;\'a0j\'a0<\'a0\cf7 \strokec7 employees\cf4 \strokec4 .\cf7 \strokec7 length\cf4 \strokec4 ;\'a0j++)\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 System\cf4 \strokec4 .\cf7 \strokec7 out\cf4 \strokec4 .\cf9 \strokec9 printf\cf4 \strokec4 (\cf11 \strokec11 "Employee\'a0%d\'a0is\'a0a\'a0%s%n"\cf4 \strokec4 ,\'a0j,\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0employees[j].\cf9 \strokec9 getClass\cf4 \strokec4 ().\cf9 \strokec9 getName\cf4 \strokec4 ());\'a0\
+\
+\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\}\'a0\cf3 \strokec3 //\'a0end\'a0main\cf4 \strokec4 \
+\}\'a0\cf3 \strokec3 //\'a0end\'a0class\'a0PayrollSystemTest\
+\
+
+\fs24 \cf12 \cb13 \strokec14 Output:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf12 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 duytran@Duy-MacBookPro15 Fig10_04_09 % javac BasePlusCommissionEmployee.java CommissionEmployee.java Date.java Employee.java HourlyEmployee.java PayrollSystemTest.java PieceWorker.java SalariedEmployee.java\
+duytran@Duy-MacBookPro15 Fig10_04_09 % java PayrollSystemTest\
+Date object constructor for date 10/27/1989\
+Date object constructor for date 11/28/1990\
+Date object constructor for date 12/11/1978\
+Date object constructor for date 2/25/1967\
+Date object constructor for date 11/6/2019\
+Date object constructor for date 11/6/2019\
+Employees processed polymorphically:\
+\
+salaried employee: John Smith\
+social security number: 111-11-1111\
+Birthdate: 10/27/1989\
+\
+weekly salary: $800.00\
+earned $800.00\
+\
+------------------------------\
+hourly employee: Karen Price\
+social security number: 222-22-2222\
+Birthdate: 11/28/1990\
+\
+hourly wage: $16.75; hours worked: 40.00\
+Happy Birthday! You earned $100 bonus\
+earned $770.00\
+\
+------------------------------\
+commission employee: Sue Jones\
+social security number: 333-33-3333\
+Birthdate: 12/11/1978\
+\
+gross sales: $10,000.00; commission rate: 0.06\
+earned $600.00\
+\
+------------------------------\
+base-salaried commission employee: Bob Lewis\
+social security number: 444-44-4444\
+Birthdate: 2/25/1967\
+\
+gross sales: $5,000.00; commission rate: 0.04; base salary: $300.00\
+new base salary with 10% increase is: $330.00\
+earned $530.00\
+\
+------------------------------\
+PieceWorker: Jesus Nazareth\
+social security number: 555-55-5555\
+Birthdate: 11/6/2019\
+\
+wage : 100.00\
+pieces : 90\
+\
+Happy Birthday! You earned $100 bonus\
+earned $9,100.00\
+\
+------------------------------\
+11/6/2019\
+Employee 0 is a SalariedEmployee\
+Employee 1 is a HourlyEmployee\
+Employee 2 is a CommissionEmployee\
+Employee 3 is a BasePlusCommissionEmployee\
+Employee 4 is a PieceWorker\
+duytran@Duy-MacBookPro15 Fig10_04_09 % 
+\fs36 \cf4 \cb2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec4 \
+\pard\pardeftab720\sl540\partightenfactor0
+\cf4 \strokec4 \
+\
+}

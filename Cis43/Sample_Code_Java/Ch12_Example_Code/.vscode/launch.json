@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ButtonTest",
+            "request": "launch",
+            "mainClass": "ButtonTest"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TextFieldTest",
+            "request": "launch",
+            "mainClass": "TextFieldTest",
+            "projectName": "Ch12_Example_Code_6507011c"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LabelTest",
+            "request": "launch",
+            "mainClass": "LabelTest"
+        }
+    ]
+}

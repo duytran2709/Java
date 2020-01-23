@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Chapter4_Assignment_20",
+            "request": "launch",
+            "mainClass": "Chapter4_Assignment_20"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Chapter4_Assignment_17",
+            "request": "launch",
+            "mainClass": "Chapter4_Assignment_17"
+        }
+    ]
+}

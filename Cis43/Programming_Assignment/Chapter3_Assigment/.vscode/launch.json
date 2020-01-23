@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - EmployeeTest",
+            "request": "launch",
+            "mainClass": "EmployeeTest"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Employee",
+            "request": "launch",
+            "mainClass": "Employee"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AccountTest",
+            "request": "launch",
+            "mainClass": "AccountTest"
+        }
+    ]
+}

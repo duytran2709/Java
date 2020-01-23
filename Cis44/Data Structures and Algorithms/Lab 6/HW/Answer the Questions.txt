@@ -1,0 +1,2 @@
+P2: Big(O) = m + log n
+P4: Big (O) = n^2

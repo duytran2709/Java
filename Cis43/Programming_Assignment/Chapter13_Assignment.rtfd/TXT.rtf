@@ -1,0 +1,163 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2509
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red72\green140\blue207;\red255\green255\blue255;\red203\green203\blue202;
+\red67\green193\blue160;\red212\green213\blue152;\red142\green214\blue255;\red184\green111\blue179;\red194\green125\blue100;
+\red167\green197\blue151;\red72\green139\blue206;\red203\green203\blue202;\red67\green192\blue160;\red88\green137\blue67;
+\red142\green213\blue255;\red184\green111\blue179;\red212\green213\blue153;\red167\green197\blue151;\red194\green125\blue100;
+}
+{\*\expandedcolortbl;;\cssrgb\c34567\c62178\c84753;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c83501\c83501\c83084;
+\cssrgb\c30674\c79032\c69026;\cssrgb\c86216\c86153\c66113;\cssrgb\c61912\c87132\c100000;\cssrgb\c77557\c52845\c75317;\cssrgb\c80757\c56727\c46519;
+\cssrgb\c71087\c80873\c65568;\cssrgb\c34356\c61927\c84545;\cssrgb\c83411\c83411\c83099;\cssrgb\c30653\c78980\c69024;\cssrgb\c41436\c59847\c32956;
+\cssrgb\c61729\c86919\c100000;\cssrgb\c77483\c52772\c75312;\cssrgb\c86232\c86184\c66253;\cssrgb\c71061\c80852\c65647;\cssrgb\c80765\c56762\c46655;
+}
+\margl1440\margr1440\vieww23800\viewh16260\viewkind0
+\deftab720
+\pard\pardeftab720\sl540\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Duy Tran - G01826554\
+Cis43\
+Chapter13_Assignments	\
+\
+//Ex_13_6\
+import\cf4  javax.swing.JFrame;\
+\cf2 public\cf4  \cf2 class\cf4  \cf5 Display\cf4  \{\
+    \cf2 public\cf4  \cf2 static\cf4  \cf5 void\cf4  \cf6 main\cf4 (\cf5 String\cf4 [] \cf7 args\cf4 ) \{\
+        \cf5 JFrame\cf4  \cf7 frame\cf4  = \cf8 new\cf4  \cf6 JFrame\cf4 (\cf9 "Draw 2D shape"\cf4 );\
+        \cf7 frame\cf4 .\cf6 setDefaultCloseOperation\cf4 (\cf7 JFrame\cf4 .\cf7 EXIT_ON_CLOSE\cf4 );\
+\
+        \cf5 DrawCube\cf4  \cf7 shapesJPanel\cf4  = \cf8 new\cf4  \cf6 DrawCube\cf4 ();\
+\
+        \cf7 frame\cf4 .\cf6 add\cf4 (shapesJPanel);\
+        \cf7 frame\cf4 .\cf6 setLocationRelativeTo\cf4 (\cf2 null\cf4 );\
+        \cf7 frame\cf4 .\cf6 setSize\cf4 (\cf10 425\cf4 , \cf10 400\cf4 );\
+        \cf7 frame\cf4 .\cf6 setVisible\cf4 (\cf2 true\cf4 );\
+\
+    \}\
+    \
+\}\
+\
+\cf2 import\cf4  java.awt.Color;\
+\cf2 import\cf4  java.awt.Graphics;\
+\cf2 import\cf4  java.awt.BasicStroke;\
+\cf2 import\cf4  java.awt.GradientPaint;\
+\cf2 import\cf4  java.awt.TexturePaint;\
+\cf2 import\cf4  java.awt.Graphics2D;\
+\cf2 import\cf4  java.awt.geom.Ellipse2D;\
+\cf2 import\cf4  java.awt.geom.Rectangle2D;\
+\cf2 import\cf4  java.awt.geom.Line2D;\
+\cf2 import\cf4  java.awt.geom.GeneralPath;\
+\cf2 import\cf4  java.security.SecureRandom;\
+\
+\cf2 import\cf4  javax.swing.JFrame;\
+\cf2 import\cf4  javax.swing.JPanel;\
+\
+\cf2 public\cf4  \cf2 class\cf4  \cf5 DrawCube\cf4  \cf2 extends\cf4  \cf5 JPanel\cf4  \{\
+        @\cf5 Override\cf4 \
+        \cf2 public\cf4  \cf5 void\cf4  \cf6 paintComponent\cf4 (\cf5 Graphics\cf4  \cf7 g\cf4 ) \{\
+            \cf2 super\cf4 .\cf6 paintComponent\cf4 (g);\
+            \cf5 Graphics2D\cf4  \cf7 g2d\cf4  = (Graphics2D) g;\
+\
+            \cf7 g2d\cf4 .\cf6 draw\cf4 (\cf8 new\cf4  Rectangle2D.\cf6 Double\cf4 (\cf10 100\cf4 , \cf10 100\cf4 , \cf10 100\cf4 , \cf10 100\cf4 ));\
+            \cf7 g2d\cf4 .\cf6 draw\cf4 (\cf8 new\cf4  Rectangle2D.\cf6 Double\cf4 (\cf10 120\cf4 , \cf10 120\cf4 , \cf10 100\cf4 , \cf10 100\cf4 ));\
+\
+            \cf7 g2d\cf4 .\cf6 draw\cf4 (\cf8 new\cf4  Line2D.\cf6 Double\cf4 (\cf10 100\cf4 , \cf10 100\cf4 , \cf10 120\cf4 , \cf10 120\cf4 ));\
+            \cf7 g2d\cf4 .\cf6 draw\cf4 (\cf8 new\cf4  Line2D.\cf6 Double\cf4 (\cf10 200\cf4 , \cf10 100\cf4 , \cf10 220\cf4 , \cf10 120\cf4 ));\
+            \cf7 g2d\cf4 .\cf6 draw\cf4 (\cf8 new\cf4  Line2D.\cf6 Double\cf4 (\cf10 100\cf4 , \cf10 200\cf4 , \cf10 120\cf4 , \cf10 220\cf4 ));\
+            \cf7 g2d\cf4 .\cf6 draw\cf4 (\cf8 new\cf4  Line2D.\cf6 Double\cf4 (\cf10 200\cf4 , \cf10 200\cf4 , \cf10 220\cf4 , \cf10 220\cf4 ));\
+        \}\
+\}\
+\
+Output:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Pasted Graphic.png \width8440 \height7980 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+Ex13_19:\
+\
+\pard\pardeftab720\sl540\partightenfactor0
+
+\f0 \cf11 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec11 import\cf12 \strokec12  java.awt.Color;\
+\cf11 \strokec11 import\cf12 \strokec12  java.awt.event.ActionListener;\
+\cf11 \strokec11 import\cf12 \strokec12  java.awt.event.ActionEvent;\
+\cf11 \strokec11 import\cf12 \strokec12  java.awt.Graphics;\
+\cf11 \strokec11 import\cf12 \strokec12  java.util.Random;\
+\cf11 \strokec11 import\cf12 \strokec12  javax.swing.JPanel;\
+\cf11 \strokec11 import\cf12 \strokec12  javax.swing.Timer;\
+\
+\cf11 \strokec11 public\cf12 \strokec12  \cf11 \strokec11 class\cf12 \strokec12  \cf13 \strokec13 SavingScreenPanel\cf12 \strokec12  \cf11 \strokec11 extends\cf12 \strokec12  \cf13 \strokec13 JPanel\cf12 \strokec12  \cf11 \strokec11 implements\cf12 \strokec12  \cf13 \strokec13 ActionListener\cf12 \strokec12  \{\
+   \cf14 \strokec14 // random-number generator\cf12 \strokec12 \
+   \cf11 \strokec11 private\cf12 \strokec12  \cf11 \strokec11 static\cf12 \strokec12  \cf11 \strokec11 final\cf12 \strokec12  \cf13 \strokec13 Random\cf12 \strokec12  \cf15 \strokec15 random\cf12 \strokec12  = \cf16 \strokec16 new\cf12 \strokec12  \cf17 \strokec17 Random\cf12 \strokec12 ();\
+   \cf11 \strokec11 private\cf12 \strokec12  \cf13 \strokec13 Timer\cf12 \strokec12  \cf15 \strokec15 timer\cf12 \strokec12 ;\
+\
+   \cf14 \strokec14 // constructor sets window's title bar string and dimensions\cf12 \strokec12 \
+   \cf11 \strokec11 public\cf12 \strokec12  \cf17 \strokec17 SavingScreenPanel\cf12 \strokec12 () \{\
+      timer = \cf16 \strokec16 new\cf12 \strokec12  \cf17 \strokec17 Timer\cf12 \strokec12 (\cf18 \strokec18 1000\cf12 \strokec12 , \cf11 \strokec11 this\cf12 \strokec12 ); \cf14 \strokec14 // create the timer, every 1000 milliseconds, the timer triggers an event on the\cf12 \strokec12 \
+                                     \cf14 \strokec14 // panel\cf12 \strokec12 \
+      \cf15 \strokec15 timer\cf12 \strokec12 .\cf17 \strokec17 start\cf12 \strokec12 ();\
+   \}\
+\
+   \cf14 \strokec14 // draw lines\cf12 \strokec12 \
+   \cf11 \strokec11 public\cf12 \strokec12  \cf13 \strokec13 void\cf12 \strokec12  \cf17 \strokec17 paintComponent\cf12 \strokec12 (\cf13 \strokec13 Graphics\cf12 \strokec12  \cf15 \strokec15 g\cf12 \strokec12 ) \{\
+      \cf11 \strokec11 super\cf12 \strokec12 .\cf17 \strokec17 paintComponent\cf12 \strokec12 (g);\
+\
+      \cf13 \strokec13 int\cf12 \strokec12  \cf15 \strokec15 x\cf12 \strokec12 , \cf15 \strokec15 y\cf12 \strokec12 , \cf15 \strokec15 width\cf12 \strokec12 , \cf15 \strokec15 height\cf12 \strokec12 , \cf15 \strokec15 startAngle\cf12 \strokec12 , \cf15 \strokec15 arcAngle\cf12 \strokec12 ;\
+\
+      \cf16 \strokec16 for\cf12 \strokec12  (\cf13 \strokec13 int\cf12 \strokec12  \cf15 \strokec15 i\cf12 \strokec12  = \cf18 \strokec18 0\cf12 \strokec12 ; i < \cf18 \strokec18 100\cf12 \strokec12 ; i++) \{\
+         x = \cf15 \strokec15 random\cf12 \strokec12 .\cf17 \strokec17 nextInt\cf12 \strokec12 (\cf18 \strokec18 300\cf12 \strokec12 );\
+         y = \cf15 \strokec15 random\cf12 \strokec12 .\cf17 \strokec17 nextInt\cf12 \strokec12 (\cf18 \strokec18 300\cf12 \strokec12 );\
+         width = \cf15 \strokec15 random\cf12 \strokec12 .\cf17 \strokec17 nextInt\cf12 \strokec12 (\cf18 \strokec18 300\cf12 \strokec12 );\
+         height = \cf15 \strokec15 random\cf12 \strokec12 .\cf17 \strokec17 nextInt\cf12 \strokec12 (\cf18 \strokec18 300\cf12 \strokec12 );\
+         startAngle = \cf15 \strokec15 random\cf12 \strokec12 .\cf17 \strokec17 nextInt\cf12 \strokec12 (\cf18 \strokec18 180\cf12 \strokec12 );\
+         arcAngle = \cf15 \strokec15 random\cf12 \strokec12 .\cf17 \strokec17 nextInt\cf12 \strokec12 (\cf18 \strokec18 360\cf12 \strokec12 );\
+\
+         \cf15 \strokec15 g\cf12 \strokec12 .\cf17 \strokec17 drawArc\cf12 \strokec12 (x, y, width, height, startAngle, arcAngle);\
+         \cf15 \strokec15 g\cf12 \strokec12 .\cf17 \strokec17 setColor\cf12 \strokec12 (\cf16 \strokec16 new\cf12 \strokec12  \cf17 \strokec17 Color\cf12 \strokec12 (\cf15 \strokec15 random\cf12 \strokec12 .\cf17 \strokec17 nextInt\cf12 \strokec12 (\cf18 \strokec18 256\cf12 \strokec12 ), \cf15 \strokec15 random\cf12 \strokec12 .\cf17 \strokec17 nextInt\cf12 \strokec12 (\cf18 \strokec18 256\cf12 \strokec12 ), \cf15 \strokec15 random\cf12 \strokec12 .\cf17 \strokec17 nextInt\cf12 \strokec12 (\cf18 \strokec18 256\cf12 \strokec12 )));\
+      \}\
+   \} \cf14 \strokec14 // end method paintComponent\cf12 \strokec12 \
+\
+   \cf14 \strokec14 // repaint JPanel\cf12 \strokec12 \
+   \cf11 \strokec11 public\cf12 \strokec12  \cf13 \strokec13 void\cf12 \strokec12  \cf17 \strokec17 actionPerformed\cf12 \strokec12 (\cf13 \strokec13 ActionEvent\cf12 \strokec12  \cf15 \strokec15 actionEvent\cf12 \strokec12 ) \{\
+      \cf17 \strokec17 repaint\cf12 \strokec12 ();\
+   \} \cf14 \strokec14 // end method actionPerformed\cf12 \strokec12 \
+\} \cf14 \strokec14 // end class SavingScreenPanel\cf12 \strokec12 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf4 \outl0\strokewidth0 \
+\
+\pard\pardeftab720\sl540\partightenfactor0
+\cf14 \outl0\strokewidth0 \strokec14 /**\cf12 \strokec12 \
+\cf14 \strokec14  * InnerScreenSaver\cf12 \strokec12 \
+\cf14 \strokec14  */\cf12 \strokec12 \
+\
+\cf11 \strokec11 import\cf12 \strokec12  javax.swing.JFrame;\
+\cf11 \strokec11 public\cf12 \strokec12  \cf11 \strokec11 class\cf12 \strokec12  \cf13 \strokec13 ScreenSaver\cf12 \strokec12  \{\
+    \cf11 \strokec11 public\cf12 \strokec12  \cf11 \strokec11 static\cf12 \strokec12  \cf13 \strokec13 void\cf12 \strokec12  \cf17 \strokec17 main\cf12 \strokec12 (\cf13 \strokec13 String\cf12 \strokec12 [] \cf15 \strokec15 args\cf12 \strokec12 )\
+    \{\
+       \cf13 \strokec13 JFrame\cf12 \strokec12  \cf15 \strokec15 frame\cf12 \strokec12  = \cf16 \strokec16 new\cf12 \strokec12  \cf17 \strokec17 JFrame\cf12 \strokec12 (\cf19 \strokec19 "Drawing random lines"\cf12 \strokec12 );\
+       \cf15 \strokec15 frame\cf12 \strokec12 .\cf17 \strokec17 setDefaultCloseOperation\cf12 \strokec12 (\cf15 \strokec15 JFrame\cf12 \strokec12 .\cf15 \strokec15 EXIT_ON_CLOSE\cf12 \strokec12 );\
+       \
+       \cf13 \strokec13 SavingScreenPanel\cf12 \strokec12  \cf15 \strokec15 saverJPanel\cf12 \strokec12  = \cf16 \strokec16 new\cf12 \strokec12  \cf17 \strokec17 SavingScreenPanel\cf12 \strokec12 ();\
+       \cf15 \strokec15 frame\cf12 \strokec12 .\cf17 \strokec17 add\cf12 \strokec12 (saverJPanel);\
+       \cf15 \strokec15 frame\cf12 \strokec12 .\cf17 \strokec17 setSize\cf12 \strokec12 (\cf18 \strokec18 425\cf12 \strokec12 , \cf18 \strokec18 400\cf12 \strokec12 );\
+       \cf15 \strokec15 frame\cf12 \strokec12 .\cf17 \strokec17 setVisible\cf12 \strokec12 (\cf11 \strokec11 true\cf12 \strokec12 );\
+       \
+    \}\
+    \
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf4 \outl0\strokewidth0 \
+\pard\pardeftab720\sl540\partightenfactor0
+\cf4 \
+Output: \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1 \cf0 \cb1 \kerning1\expnd0\expndtw0 {{\NeXTGraphic 1__#$!@%!#__Pasted Graphic.png \width14080 \height12740 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}
+\f0 \cf4 \cb3 \expnd0\expndtw0\kerning0
+\
+}

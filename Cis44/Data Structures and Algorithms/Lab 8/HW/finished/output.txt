@@ -1,0 +1,13 @@
+Is dictionary empty: false
+Entire dictionary is:
+a -> aaaa
+b -> bbbb
+c -> cccc
+d -> dddd
+e -> eeee
+f -> ffff
+g -> gggg
+Is key f in the dictionary: true
+Value of key f is: ffff
+Value ffff of key f is removed
+Size of dictionary right now is: 6

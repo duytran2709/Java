@@ -1,0 +1,156 @@
+//HomeWork 13-16//
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication4;
+
+/**
+ *
+ * @author CongDinh
+ */
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.BasicStroke;
+import java.awt.GradientPaint;
+import java.awt.TexturePaint;
+import java.awt.Graphics2D;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Rectangle2D;
+import java.awt.geom.Line2D;
+import java.awt.geom.GeneralPath;
+import java.security.SecureRandom;
+import javax.swing.JPanel;
+
+public class DrawingCube extends JPanel 
+{
+	@Override
+	public void paintComponent(Graphics g)
+	{
+		super.paintComponent(g);
+		Graphics2D g2d = (Graphics2D) g;
+                
+		g2d.draw(new Rectangle2D.Double(100,100,100,100));
+                g2d.draw(new Rectangle2D.Double(120,120,100,100));
+                
+                g2d.draw(new Line2D.Double(100, 100, 120, 120));
+                g2d.draw(new Line2D.Double(200, 100, 220, 120));
+                g2d.draw(new Line2D.Double(100, 200, 120, 220));
+                g2d.draw(new Line2D.Double(200, 200, 220, 220));
+	}    
+}
+
+package javaapplication4;
+import javax.swing.JFrame;
+
+
+/**
+ *
+ * @author CongDinh
+ */
+public class Shapes {
+    public static void main(String[] args)
+    {
+        JFrame frame = new JFrame("Drawing 2D shapes");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        DrawingCube shapesJPanel = new DrawingCube();
+        
+        frame.add(shapesJPanel);
+        frame.setSize(425, 200);
+        frame.setVisible(true);
+        
+    }
+}
+
+
+//HomeWork 13-19
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication4;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Graphics;
+import java.util.Random;
+import javax.swing.JPanel;
+import javax.swing.Timer;
+
+public class SaverJPanel extends JPanel implements ActionListener
+{
+   // random-number generator
+   private static final Random random = new Random();
+   private Timer timer;
+
+   // constructor sets window's title bar string and dimensions
+   public SaverJPanel()
+   {
+      timer = new Timer( 1000, this ); // create the timer, every 1000 milliseconds, the timer triggers an event on the panel
+      timer.start();
+   } // end SaverJPanel constructor
+
+   // draw lines 
+   public void paintComponent( Graphics g )
+   {
+      super.paintComponent( g );
+
+      int x, y, x1, y1;
+      
+      for(int i =0; i < 100; i++)
+      {
+      x = random.nextInt(300);
+      y = random.nextInt(300);
+      x1 = random.nextInt(300);
+      y1 = random.nextInt(300);
+
+      g.drawLine(x, y, x1, y1);
+      g.setColor(new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256)));
+     //TO DO:
+	 //Use for loop to draw 100 lines
+		//select x, y, x1, y1 coordinates to be random numbers between 0 and 300
+		//set color to be random RGB value
+		//call graphics draw line between point (x,y) and point(x1, y1)
+        }
+    } // end method paintComponent
+
+   // repaint JPanel
+   public void actionPerformed( ActionEvent actionEvent )
+   {
+      repaint();
+   } // end method actionPerformed
+} // end class SaverJPanel
+
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication4;
+
+import javax.swing.JFrame;
+/**
+ *
+ * @author CongDinh
+ */
+public class Saver2 {
+    public static void main(String[] args)
+    {
+       JFrame frame = new JFrame("Drawing random Line");
+       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       
+       SaverJPanel saverJPanel = new SaverJPanel();
+       frame.add(saverJPanel);
+       frame.setSize(425, 200);
+       frame.setVisible(true);
+       
+    }
+    
+}

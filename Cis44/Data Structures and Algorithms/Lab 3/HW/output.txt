@@ -1,0 +1,7 @@
+
+String "Boooohj././Booooh;[j" can be splited!
+
+Jail is added to the queue
+
+All values in myQueue after splicing anotherQueue:
+Jill	Jane	Joe	Jerry	Jail	A	B	
