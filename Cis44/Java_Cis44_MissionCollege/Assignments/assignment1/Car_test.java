@@ -13,7 +13,7 @@ public class Car_test {
         Scanner input = new Scanner(System.in);
 
         double cost = 0;
-        Car car1 = new Car(10, 8, "Tesla");
+        Car car1 = new Car(6, 8, "Tesla");
         System.out.printf("Your current speed: %d mph\n", car1.getSpeed());
         System.out.printf("Your current tank: %d galons\n", car1.getTank());
         System.out.printf("Your car model: %s\n", car1.getModel());
@@ -26,7 +26,7 @@ public class Car_test {
         System.out.println("How many MPH of speed do you want to increase?"); 
         int speed = input.nextInt();
         car1.goFast(speed);
-        System.out.printf("Your current speed: %d mph\n", car1.getSpeed());
+        System.out.printf("Your speed after increasing: %d mph\n", car1.getSpeed());
         
         car1.goSlow();
         System.out.printf("Your speed after slowing down 5mph: %d mph\n", car1.getSpeed());
