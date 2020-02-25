@@ -7,17 +7,21 @@
  * and add several cars going at different speeds. 
  * sort them using Collections sort. 
  */
-public class Car {
+public class Car implements Carinterface , Comparable<Car> {
 
     private int speed;
     private int tank;
     private String model;
+    private int num;
+    private static int number = 0;
 
     Car ()
     {
+        ++number;
         this.speed = 0;
         this.tank = 0;
         this.model = "new car";
+        num = number; 
     }
 
     public void setSpeed(int speed)
@@ -51,9 +55,11 @@ public class Car {
         return model; 
     }
 
+    @Override
     public String toString()
     {
         String st ="------------------------------\n";
+        st = st + "This is car number: " + num + "\n"; 
         st = st + "The model of this car is " + this.model + "\n"; 
         st = st + "Speed is = " + this.speed + " This car has " + this.tank + " gallons\n";
         st = st + "-----------------------------------------\n";
@@ -86,4 +92,12 @@ public class Car {
         if((speed - s) < 0 ) speed = 0;
         else speed = speed - s;
     }
+
+    public int compareTo(Car c)
+    {
+        if ( speed > c.speed) return 1;
+        if (speed < c.speed) return -1;
+        return 0;
+    }
+
 }

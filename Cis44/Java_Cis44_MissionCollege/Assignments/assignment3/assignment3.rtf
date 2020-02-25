@@ -1,0 +1,219 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red203\green203\blue202;\red255\green255\blue255;\red88\green137\blue67;
+\red71\green138\blue206;\red67\green192\blue160;\red212\green213\blue153;\red141\green213\blue254;\red167\green197\blue151;
+\red183\green111\blue179;\red194\green125\blue100;\red71\green137\blue205;\red202\green202\blue202;\red67\green192\blue160;
+\red141\green212\blue254;\red167\green197\blue151;\red212\green213\blue154;\red194\green126\blue101;\red183\green111\blue179;
+\red205\green173\blue106;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c83320\c83320\c83112;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c41481\c59899\c33082;
+\cssrgb\c34146\c61677\c84338;\cssrgb\c30631\c78928\c69023;\cssrgb\c86247\c86215\c66392;\cssrgb\c61545\c86704\c99884;\cssrgb\c71035\c80830\c65726;
+\cssrgb\c77407\c52698\c75307;\cssrgb\c80772\c56796\c46790;\cssrgb\c33936\c61427\c84130;\cssrgb\c83229\c83229\c83125;\cssrgb\c30610\c78876\c69022;
+\cssrgb\c61361\c86489\c99746;\cssrgb\c71008\c80807\c65805;\cssrgb\c86261\c86245\c66529;\cssrgb\c80778\c56830\c46925;\cssrgb\c77331\c52624\c75301;
+\cssrgb\c84255\c72854\c48827;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c99985\c0;}
+\margl1440\margr1440\vieww16980\viewh16180\viewkind0
+\deftab720
+\pard\pardeftab720\sl540\partightenfactor0
+
+\f0\fs36 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\sl540\partightenfactor0
+\cf4 \strokec4 /**\cf2 \strokec2 \
+\cf4 \strokec4  * Duy Tran - Cis44\cf2 \strokec2 \
+\cf4 \strokec4  * Assignment3\cf2 \strokec2 \
+\cf4 \strokec4  * OverloadedMethods\cf2 \strokec2 \
+\cf4 \strokec4  * 1-   Write a generic method called minimum that accepts four items and find the minimum of them. \cf2 \strokec2 \
+\cf4 \strokec4  * 2-   Test your class with Integer, Double, Character, String and Car objects.\cf2 \strokec2 \
+\cf4 \strokec4  */\cf2 \strokec2 \
+\
+\pard\pardeftab720\sl540\partightenfactor0
+\cf5 \strokec5 public\cf2 \strokec2  \cf5 \strokec5 class\cf2 \strokec2  \cf6 \strokec6 OverloadedMethods\cf2 \strokec2  \{\
+\
+    \cf5 \strokec5 public\cf2 \strokec2  \cf5 \strokec5 static\cf2 \strokec2  \cf6 \strokec6 void\cf2 \strokec2  \cf7 \strokec7 main\cf2 \strokec2 (\cf6 \strokec6 String\cf2 \strokec2 [] \cf8 \strokec8 args\cf2 \strokec2 ) \{\
+\
+\
+        \cf6 \strokec6 Integer\cf2 \strokec2 [] \cf8 \strokec8 integerArray\cf2 \strokec2   = \{\cf9 \strokec9 2\cf2 \strokec2 ,\cf9 \strokec9 3\cf2 \strokec2 ,\cf9 \strokec9 4\cf2 \strokec2 \};\
+\
+        \cf7 \strokec7 printArray\cf2 \strokec2 (integerArray);\
+\
+        \cf6 \strokec6 Integer\cf2 \strokec2  \cf8 \strokec8 integer1\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 Integer\cf2 \strokec2 (\cf9 \strokec9 2\cf2 \strokec2 );\
+        \cf6 \strokec6 Integer\cf2 \strokec2  \cf8 \strokec8 integer2\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 Integer\cf2 \strokec2 (\cf9 \strokec9 8\cf2 \strokec2 );\
+        \cf6 \strokec6 Integer\cf2 \strokec2  \cf8 \strokec8 integer3\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 Integer\cf2 \strokec2 (\cf9 \strokec9 5\cf2 \strokec2 );\
+        \
+        \cf8 \strokec8 System\cf2 \strokec2 .\cf8 \strokec8 out\cf2 \strokec2 .\cf7 \strokec7 println\cf2 \strokec2 (\cf11 \strokec11 "The maximum integer: "\cf2 \strokec2 );\
+        \cf8 \strokec8 System\cf2 \strokec2 .\cf8 \strokec8 out\cf2 \strokec2 .\cf7 \strokec7 println\cf2 \strokec2 (\cf7 \strokec7 minimum\cf2 \strokec2 (integer1,integer2,integer3));\
+\
+        \cf6 \strokec6 Double\cf2 \strokec2  \cf8 \strokec8 double1\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 Double\cf2 \strokec2 (\cf9 \strokec9 2.3\cf2 \strokec2 );\
+        \cf6 \strokec6 Double\cf2 \strokec2  \cf8 \strokec8 double2\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 Double\cf2 \strokec2 (\cf9 \strokec9 4.5\cf2 \strokec2 );\
+        \cf6 \strokec6 Double\cf2 \strokec2  \cf8 \strokec8 double3\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 Double\cf2 \strokec2 (\cf9 \strokec9 9.1\cf2 \strokec2 );\
+\
+        \cf8 \strokec8 System\cf2 \strokec2 .\cf8 \strokec8 out\cf2 \strokec2 .\cf7 \strokec7 println\cf2 \strokec2 (\cf11 \strokec11 "The maximum double: "\cf2 \strokec2 );\
+        \cf8 \strokec8 System\cf2 \strokec2 .\cf8 \strokec8 out\cf2 \strokec2 .\cf7 \strokec7 println\cf2 \strokec2 (\cf7 \strokec7 minimum\cf2 \strokec2 (double1, double2, double3));\
+\
+        \cf6 \strokec6 String\cf2 \strokec2  \cf8 \strokec8 string1\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 String\cf2 \strokec2 (\cf11 \strokec11 "duy"\cf2 \strokec2 );\
+        \cf6 \strokec6 String\cf2 \strokec2  \cf8 \strokec8 string2\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 String\cf2 \strokec2 (\cf11 \strokec11 "huyen"\cf2 \strokec2 );\
+        \cf6 \strokec6 String\cf2 \strokec2  \cf8 \strokec8 string3\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 String\cf2 \strokec2 (\cf11 \strokec11 "khoa"\cf2 \strokec2 );\
+\
+        \cf8 \strokec8 System\cf2 \strokec2 .\cf8 \strokec8 out\cf2 \strokec2 .\cf7 \strokec7 println\cf2 \strokec2 (\cf11 \strokec11 "The maximum String: "\cf2 \strokec2 );\
+        \cf8 \strokec8 System\cf2 \strokec2 .\cf8 \strokec8 out\cf2 \strokec2 .\cf7 \strokec7 println\cf2 \strokec2 (\cf7 \strokec7 minimum\cf2 \strokec2 (string1, string2, string3));\
+\
+        \cf6 \strokec6 Character\cf2 \strokec2  \cf8 \strokec8 char1\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 Character\cf2 \strokec2 (\cf11 \strokec11 'n'\cf2 \strokec2 );\
+        \cf6 \strokec6 Character\cf2 \strokec2  \cf8 \strokec8 char2\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 Character\cf2 \strokec2 (\cf11 \strokec11 'h'\cf2 \strokec2 );\
+        \cf6 \strokec6 Character\cf2 \strokec2  \cf8 \strokec8 char3\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 Character\cf2 \strokec2 (\cf11 \strokec11 'u'\cf2 \strokec2 );\
+        \cf8 \strokec8 System\cf2 \strokec2 .\cf8 \strokec8 out\cf2 \strokec2 .\cf7 \strokec7 println\cf2 \strokec2 (\cf11 \strokec11 "The maximum character: "\cf2 \strokec2 );\
+        \cf8 \strokec8 System\cf2 \strokec2 .\cf8 \strokec8 out\cf2 \strokec2 .\cf7 \strokec7 println\cf2 \strokec2 (\cf7 \strokec7 minimum\cf2 \strokec2 (char1, char2, char3));\
+\
+        \cf6 \strokec6 Car\cf2 \strokec2  \cf8 \strokec8 car1\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 Car\cf2 \strokec2  ();\
+        \cf6 \strokec6 Car\cf2 \strokec2  \cf8 \strokec8 car2\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 Car\cf2 \strokec2  ();\
+        \cf6 \strokec6 Car\cf2 \strokec2  \cf8 \strokec8 car3\cf2 \strokec2  = \cf10 \strokec10 new\cf2 \strokec2  \cf7 \strokec7 Car\cf2 \strokec2  ();\
+\
+        \cf8 \strokec8 car1\cf2 \strokec2 .\cf7 \strokec7 goFast\cf2 \strokec2 (\cf9 \strokec9 2\cf2 \strokec2 );\
+        \cf8 \strokec8 car2\cf2 \strokec2 .\cf7 \strokec7 goFast\cf2 \strokec2 (\cf9 \strokec9 10\cf2 \strokec2 );\
+        \cf8 \strokec8 car3\cf2 \strokec2 .\cf7 \strokec7 goFast\cf2 \strokec2 (\cf9 \strokec9 5\cf2 \strokec2 );\
+\
+        \cf8 \strokec8 System\cf2 \strokec2 .\cf8 \strokec8 out\cf2 \strokec2 .\cf7 \strokec7 println\cf2 \strokec2 (\cf11 \strokec11 "The car whose speed is maximum: "\cf2 \strokec2 );\
+        \cf8 \strokec8 System\cf2 \strokec2 .\cf8 \strokec8 out\cf2 \strokec2 .\cf7 \strokec7 println\cf2 \strokec2 (\cf7 \strokec7 minimum\cf2 \strokec2 (car1, car2, car3));\
+\
+    \}\
+\
+    \cf5 \strokec5 public\cf2 \strokec2  \cf5 \strokec5 static\cf2 \strokec2  <\cf6 \strokec6 T\cf2 \strokec2 > \cf6 \strokec6 void\cf2 \strokec2  \cf7 \strokec7 printArray\cf2 \strokec2 (\cf6 \strokec6 T\cf2 \strokec2 [] \cf8 \strokec8 inputArray\cf2 \strokec2 )\
+    \{\
+        \cf10 \strokec10 for\cf2 \strokec2 (\cf6 \strokec6 T\cf2 \strokec2  \cf8 \strokec8 element\cf10 \strokec10 :\cf2 \strokec2  inputArray)\
+        \cf8 \strokec8 System\cf2 \strokec2 .\cf8 \strokec8 out\cf2 \strokec2 .\cf7 \strokec7 printf\cf2 \strokec2 (\cf11 \strokec11 "%s "\cf2 \strokec2 , element);\
+        \cf8 \strokec8 System\cf2 \strokec2 .\cf8 \strokec8 out\cf2 \strokec2 .\cf7 \strokec7 println\cf2 \strokec2 ();\
+    \}\
+\
+    \cf5 \strokec5 public\cf2 \strokec2  \cf5 \strokec5 static\cf2 \strokec2  <\cf6 \strokec6 T\cf2 \strokec2  \cf5 \strokec5 extends\cf2 \strokec2  \cf6 \strokec6 Comparable\cf2 \strokec2  <\cf6 \strokec6 T\cf2 \strokec2 >> \cf6 \strokec6 T\cf2 \strokec2  \cf7 \strokec7 maximum\cf2 \strokec2  ( \cf6 \strokec6 T\cf2 \strokec2  \cf8 \strokec8 x\cf2 \strokec2 , \cf6 \strokec6 T\cf2 \strokec2  \cf8 \strokec8 y\cf2 \strokec2 , \cf6 \strokec6 T\cf2 \strokec2  \cf8 \strokec8 z\cf2 \strokec2 )\
+    \{\
+        \cf6 \strokec6 T\cf2 \strokec2  \cf8 \strokec8 max\cf2 \strokec2  = x;\
+\
+        \cf10 \strokec10 if\cf2 \strokec2  (\cf8 \strokec8 y\cf2 \strokec2 .\cf7 \strokec7 compareTo\cf2 \strokec2 (max) > \cf9 \strokec9 0\cf2 \strokec2 ) max = y;\
+        \cf10 \strokec10 if\cf2 \strokec2  (\cf8 \strokec8 z\cf2 \strokec2 .\cf7 \strokec7 compareTo\cf2 \strokec2 (max) > \cf9 \strokec9 0\cf2 \strokec2 ) max = z;\
+\
+        \cf10 \strokec10 return\cf2 \strokec2  max; \
+    \}\
+\
+    \cf5 \strokec5 public\cf2 \strokec2  \cf5 \strokec5 static\cf2 \strokec2  <\cf6 \strokec6 T\cf2 \strokec2  \cf5 \strokec5 extends\cf2 \strokec2  \cf6 \strokec6 Comparable\cf2 \strokec2  <\cf6 \strokec6 T\cf2 \strokec2 >> \cf6 \strokec6 T\cf2 \strokec2  \cf7 \strokec7 minimum\cf2 \strokec2  ( \cf6 \strokec6 T\cf2 \strokec2  \cf8 \strokec8 x\cf2 \strokec2 , \cf6 \strokec6 T\cf2 \strokec2  \cf8 \strokec8 y\cf2 \strokec2 , \cf6 \strokec6 T\cf2 \strokec2  \cf8 \strokec8 z\cf2 \strokec2 )\
+    \{\
+        \cf6 \strokec6 T\cf2 \strokec2  \cf8 \strokec8 min\cf2 \strokec2  = x;\
+        \
+        \cf10 \strokec10 if\cf2 \strokec2  (\cf8 \strokec8 y\cf2 \strokec2 .\cf7 \strokec7 compareTo\cf2 \strokec2 (min) < \cf9 \strokec9 0\cf2 \strokec2 ) min = y;\
+        \cf10 \strokec10 if\cf2 \strokec2  (\cf8 \strokec8 z\cf2 \strokec2 .\cf7 \strokec7 compareTo\cf2 \strokec2 (min) < \cf9 \strokec9 0\cf2 \strokec2 ) min = z;\
+\
+        \cf10 \strokec10 return\cf2 \strokec2  min;\
+    \}\
+\}\
+\
+\
+\cf12 \strokec12 public\cf13 \strokec13  \cf12 \strokec12 class\cf13 \strokec13  \cf14 \strokec14 Car\cf13 \strokec13  \cf12 \strokec12 implements\cf13 \strokec13  \cf14 \strokec14 Comparable\cf13 \strokec13 <\cf14 \strokec14 Car\cf13 \strokec13 > \{\
+\
+    \cf12 \strokec12 private\cf13 \strokec13  \cf14 \strokec14 int\cf13 \strokec13  \cf15 \strokec15 speed\cf13 \strokec13 ;\
+    \cf12 \strokec12 private\cf13 \strokec13  \cf14 \strokec14 int\cf13 \strokec13  \cf15 \strokec15 tank\cf13 \strokec13 ;\
+    \cf12 \strokec12 private\cf13 \strokec13  \cf14 \strokec14 String\cf13 \strokec13  \cf15 \strokec15 model\cf13 \strokec13 ;\
+    \cf12 \strokec12 private\cf13 \strokec13  \cf14 \strokec14 int\cf13 \strokec13  \cf15 \strokec15 num\cf13 \strokec13 ;\
+    \cf12 \strokec12 private\cf13 \strokec13  \cf12 \strokec12 static\cf13 \strokec13  \cf14 \strokec14 int\cf13 \strokec13  \cf15 \strokec15 number\cf13 \strokec13  = \cf16 \strokec16 0\cf13 \strokec13 ;\
+\
+    \cf17 \strokec17 Car\cf13 \strokec13  ()\
+    \{\
+        ++number;\
+        \cf12 \strokec12 this\cf13 \strokec13 .\cf15 \strokec15 speed\cf13 \strokec13  = \cf16 \strokec16 0\cf13 \strokec13 ;\
+        \cf12 \strokec12 this\cf13 \strokec13 .\cf15 \strokec15 tank\cf13 \strokec13  = \cf16 \strokec16 0\cf13 \strokec13 ;\
+        \cf12 \strokec12 this\cf13 \strokec13 .\cf15 \strokec15 model\cf13 \strokec13  = \cf18 \strokec18 "new car"\cf13 \strokec13 ;\
+        num = number; \
+    \}\
+\
+    \cf12 \strokec12 public\cf13 \strokec13  \cf14 \strokec14 void\cf13 \strokec13  \cf17 \strokec17 setSpeed\cf13 \strokec13 (\cf14 \strokec14 int\cf13 \strokec13  \cf15 \strokec15 speed\cf13 \strokec13 )\
+    \{\
+        \cf12 \strokec12 this\cf13 \strokec13 .\cf15 \strokec15 speed\cf13 \strokec13  = speed;\
+    \}\
+\
+    \cf12 \strokec12 public\cf13 \strokec13  \cf14 \strokec14 int\cf13 \strokec13  \cf17 \strokec17 getSpeed\cf13 \strokec13  ()\
+    \{\
+        \cf19 \strokec19 return\cf13 \strokec13  speed;\
+    \}\
+\
+    \cf12 \strokec12 public\cf13 \strokec13  \cf14 \strokec14 void\cf13 \strokec13  \cf17 \strokec17 setTank\cf13 \strokec13  (\cf14 \strokec14 int\cf13 \strokec13  \cf15 \strokec15 tank\cf13 \strokec13 )\
+    \{\
+        \cf19 \strokec19 if\cf13 \strokec13  ((\cf12 \strokec12 this\cf13 \strokec13 .\cf15 \strokec15 tank\cf13 \strokec13  + tank ) > \cf16 \strokec16 15\cf13 \strokec13 ) \cf12 \strokec12 this\cf13 \strokec13 .\cf15 \strokec15 tank\cf13 \strokec13  = \cf16 \strokec16 15\cf13 \strokec13 ;\
+        \cf19 \strokec19 else\cf13 \strokec13  \cf12 \strokec12 this\cf13 \strokec13 .\cf15 \strokec15 tank\cf13 \strokec13  = \cf12 \strokec12 this\cf13 \strokec13 .\cf15 \strokec15 tank\cf13 \strokec13  + tank;\
+    \}\
+\
+    \cf12 \strokec12 public\cf13 \strokec13  \cf14 \strokec14 int\cf13 \strokec13  \cf17 \strokec17 getTank\cf13 \strokec13 ()\
+    \{\
+        \cf19 \strokec19 return\cf13 \strokec13  tank;\
+    \}\
+\
+    \cf12 \strokec12 public\cf13 \strokec13  \cf14 \strokec14 void\cf13 \strokec13  \cf17 \strokec17 setModel\cf13 \strokec13 ( \cf14 \strokec14 String\cf13 \strokec13  \cf15 \strokec15 model\cf13 \strokec13 )\
+    \{\
+        \cf12 \strokec12 this\cf13 \strokec13 .\cf15 \strokec15 model\cf13 \strokec13  = model;\
+    \}\
+\
+    \cf12 \strokec12 public\cf13 \strokec13  \cf14 \strokec14 String\cf13 \strokec13  \cf17 \strokec17 getModel\cf13 \strokec13  ()\
+    \{\
+        \cf19 \strokec19 return\cf13 \strokec13  model; \
+    \}\
+\
+    @\cf14 \strokec14 Override\cf13 \strokec13 \
+    \cf12 \strokec12 public\cf13 \strokec13  \cf14 \strokec14 String\cf13 \strokec13  \cf17 \strokec17 toString\cf13 \strokec13 ()\
+    \{\
+        \cf14 \strokec14 String\cf13 \strokec13  \cf15 \strokec15 st\cf13 \strokec13  =\cf18 \strokec18 "------------------------------\cf20 \strokec20 \\n\cf18 \strokec18 "\cf13 \strokec13 ;\
+        st = st + \cf18 \strokec18 "This is car number: "\cf13 \strokec13  + num + \cf18 \strokec18 "\cf20 \strokec20 \\n\cf18 \strokec18 "\cf13 \strokec13 ; \
+        st = st + \cf18 \strokec18 "The model of this car is "\cf13 \strokec13  + \cf12 \strokec12 this\cf13 \strokec13 .\cf15 \strokec15 model\cf13 \strokec13  + \cf18 \strokec18 "\cf20 \strokec20 \\n\cf18 \strokec18 "\cf13 \strokec13 ; \
+        st = st + \cf18 \strokec18 "Speed is = "\cf13 \strokec13  + \cf12 \strokec12 this\cf13 \strokec13 .\cf15 \strokec15 speed\cf13 \strokec13  + \cf18 \strokec18 " This car has "\cf13 \strokec13  + \cf12 \strokec12 this\cf13 \strokec13 .\cf15 \strokec15 tank\cf13 \strokec13  + \cf18 \strokec18 " gallons\cf20 \strokec20 \\n\cf18 \strokec18 "\cf13 \strokec13 ;\
+        st = st + \cf18 \strokec18 "-----------------------------------------\cf20 \strokec20 \\n\cf18 \strokec18 "\cf13 \strokec13 ;\
+        \cf19 \strokec19 return\cf13 \strokec13  st;\
+    \}\
+\
+    \cf12 \strokec12 public\cf13 \strokec13  \cf14 \strokec14 double\cf13 \strokec13  \cf17 \strokec17 pumpingGas\cf13 \strokec13  ( \cf14 \strokec14 int\cf13 \strokec13  \cf15 \strokec15 amountOfGas\cf13 \strokec13 )\
+    \{   \
+        \cf14 \strokec14 double\cf13 \strokec13  \cf15 \strokec15 price\cf13 \strokec13  = \cf16 \strokec16 3.14\cf13 \strokec13 ;\
+        \cf19 \strokec19 if\cf13 \strokec13  (tank == \cf16 \strokec16 15\cf13 \strokec13 )\
+            \cf19 \strokec19 return\cf13 \strokec13  \cf16 \strokec16 0.0\cf13 \strokec13 ;\
+        \cf19 \strokec19 else\cf13 \strokec13  \cf19 \strokec19 if\cf13 \strokec13  ((tank + amountOfGas) <= \cf16 \strokec16 15\cf13 \strokec13 ) \{\
+            \cf12 \strokec12 this\cf13 \strokec13 .\cf15 \strokec15 tank\cf13 \strokec13  += amountOfGas;\
+            \cf19 \strokec19 return\cf13 \strokec13  price * amountOfGas;\
+        \} \cf19 \strokec19 else\cf13 \strokec13  \{\
+            amountOfGas = \cf16 \strokec16 15\cf13 \strokec13  - tank;\
+            tank = \cf16 \strokec16 15\cf13 \strokec13 ;\
+            \cf19 \strokec19 return\cf13 \strokec13  price * amountOfGas;\
+        \}\
+    \}\
+\
+    \cf12 \strokec12 public\cf13 \strokec13  \cf14 \strokec14 void\cf13 \strokec13  \cf17 \strokec17 goFast\cf13 \strokec13  (\cf14 \strokec14 int\cf13 \strokec13  \cf15 \strokec15 s\cf13 \strokec13 )\
+    \{\
+        \cf19 \strokec19 if\cf13 \strokec13 ((speed + s) > \cf16 \strokec16 100\cf13 \strokec13 ) speed = \cf16 \strokec16 100\cf13 \strokec13 ;\
+        \cf19 \strokec19 else\cf13 \strokec13  speed = speed + s;\
+    \}\
+\
+    \cf12 \strokec12 public\cf13 \strokec13  \cf14 \strokec14 void\cf13 \strokec13  \cf17 \strokec17 goSlow\cf13 \strokec13  (\cf14 \strokec14 int\cf13 \strokec13  \cf15 \strokec15 s\cf13 \strokec13 )\
+    \{\
+        \cf19 \strokec19 if\cf13 \strokec13 ((speed - s) < \cf16 \strokec16 0\cf13 \strokec13  ) speed = \cf16 \strokec16 0\cf13 \strokec13 ;\
+        \cf19 \strokec19 else\cf13 \strokec13  speed = speed - s;\
+    \}\
+\
+    \cf12 \strokec12 public\cf13 \strokec13  \cf14 \strokec14 int\cf13 \strokec13  \cf17 \strokec17 compareTo\cf13 \strokec13 (\cf14 \strokec14 Car\cf13 \strokec13  \cf15 \strokec15 c\cf13 \strokec13 )\
+    \{\
+        \cf19 \strokec19 if\cf13 \strokec13  ( speed > \cf15 \strokec15 c\cf13 \strokec13 .\cf15 \strokec15 speed\cf13 \strokec13 ) \cf19 \strokec19 return\cf13 \strokec13  \cf16 \strokec16 1\cf13 \strokec13 ;\
+        \cf19 \strokec19 if\cf13 \strokec13  (speed < \cf15 \strokec15 c\cf13 \strokec13 .\cf15 \strokec15 speed\cf13 \strokec13 ) \cf19 \strokec19 return\cf13 \strokec13  -\cf16 \strokec16 1\cf13 \strokec13 ;\
+        \cf19 \strokec19 return\cf13 \strokec13  \cf16 \strokec16 0\cf13 \strokec13 ;\
+    \}\
+\
+\}\
+\
+\pard\pardeftab720\sl540\partightenfactor0
+\cf21 \cb22 \strokec2 #output screen:\
+\
+duytran@Duy-MacBookPro15 ~/Programming_Language/Java/Cis44/Java_Cis44_MissionCollege/Assignments/assignment3 (master)\
+$ javac OverloadedMethods.java \
+duytran@Duy-MacBookPro15 ~/Programming_Language/Java/Cis44/Java_Cis44_MissionCollege/Assignments/assignment3 (master)\
+$ java OverloadedMethods \
+2 3 4 \
+The maximum integer: 2\
+The maximum double: 2.3\
+The maximum String: duy\
+The maximum character: h\
+The car whose speed is minimum: \
+------------------------------\
+This is car number: 1\
+The model of this car is new car\
+Speed is = 2 This car has 0 gallons\
+-----------------------------------------}
