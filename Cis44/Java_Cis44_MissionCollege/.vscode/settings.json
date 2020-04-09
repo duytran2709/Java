@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "**/*.class": true,
+        "**/*.pptx": true,
+        "**/*.docx": true
+    }
+}

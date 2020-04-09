@@ -198,16 +198,11 @@ public final class ArrayBag<T> implements BagInterface<T>
 		for(int i=0; i< numberOfEntries; i++)
 			System.out.print(bag[i] + "  ");
 		System.out.println();
-   }
-   
-   public String toString()  
- {
-	String str = "";
-	for (int i = 0; i < numberOfEntries; i++)
-		str = str + bag[i] + "   ";
-	return str;
- }
-
+	}
+	
+	
+	
+	
 	
    // Throws an exception if this object is not initialized.
    private void checkInitialization()
@@ -215,48 +210,6 @@ public final class ArrayBag<T> implements BagInterface<T>
       if (!initialized)
          throw new SecurityException("ArrayBag object is not initialized properly.");
    } // end checkInitialization
-
-   public ArrayBag<T> union (ArrayBag<T> otherBag)
-   {
-      ArrayBag<T> unionBag = new ArrayBag<>();
-      int index;
-      for (index = 0; index < numberOfEntries; index++)
-          unionBag.add(bag[index]);
-      for (index = 0; index < otherBag.getCurrentSize(); index++)
-           unionBag.add(otherBag.bag[index]);
-      return unionBag;
-   }
-
-   public ArrayBag<T> intersection (ArrayBag<T> otherBag)
-   {
-      ArrayBag<T> intersectionBag = new ArrayBag<>();
-      // copy this bag
-      for (int x = 0; x < numberOfEntries; x++)
-         for(int y = 0; y < otherBag.getCurrentSize(); y++)  
-            if (bag[x].equals(otherBag.bag[y]) && !intersectionBag.contains(otherBag.bag[y]))
-                  intersectionBag.add(bag[x]);
-      return intersectionBag;
-   } 
-   
-   public ArrayBag<T> difference(ArrayBag<T> otherBag)
-   {
-
-   ArrayBag<T> differenceBag = new ArrayBag<>();
-   
-   int index;
-   // copy this bag
-   for (index = 0; index < numberOfEntries; index++)
-       {
-       differenceBag.add(bag[index]);
-       } 
-
-   for (index = 0; index < otherBag.getCurrentSize(); index++)
-      {
-      if (differenceBag.contains(otherBag.bag[index]))
-        differenceBag.remove(otherBag.bag[index]);// end if
-      } // end for
-   return differenceBag;
-   } // end difference
 } // end ArrayBag
 
 
